@@ -4,6 +4,10 @@ You can use the [editor on GitHub](https://github.com/OTE-Lagz/OTE-Lagz.github.i
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+##**There is HTML Code under here lol**
+<h2><a href="https://www.khanacademy.org/computer-programming/lava-speedrun/6529889506902016">Lava Speedrun</a></h2><script src="https://www.khanacademy.org/computer-programming/lava-speedrun/6529889506902016/embed.js?editor=yes&buttons=yes&author=yes&embed=yes"></script><p>Made using: <a href="http://www.khanacademy.org/computer-programming">Khan Academy Computer Science</a></p>
+
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
@@ -36,4 +40,4 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
 
-<h2><a href="https://www.khanacademy.org/computer-programming/lava-speedrun/6529889506902016">Lava Speedrun</a></h2><script src="https://www.khanacademy.org/computer-programming/lava-speedrun/6529889506902016/embed.js?editor=yes&buttons=yes&author=yes&embed=yes"></script><p>Made using: <a href="http://www.khanacademy.org/computer-programming">Khan Academy Computer Science</a></p>
+
