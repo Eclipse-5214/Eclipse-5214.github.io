@@ -61,5 +61,6 @@ var player = function(){
 
 function draw() {
  bacground(255);
+ player();
  
 }
