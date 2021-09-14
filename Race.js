@@ -1,86 +1,65 @@
 function setup() {
  createCanvas(windowWidth-20, windowHeight-20);
 }
-scale(width/600, height/600);
-rectMode(CENTER);
-var keys = [];
+var px=200;
+var py=200;
+var keys=[];
 
-function keyPressed() {
+//Player    {
+noStroke();
+
+//keys
+var keyPressed = function(){
     keys[keyCode] = true;
-}
-
-function keyReleased() {
+};
+var keyReleased = function(){
     keys[keyCode] = false;
+};
+//player
+var player = function(){
+    fill(234, 0, 255);
+    rect(px,py,Size,Size,5);
+    if(keys[RIGHT]){
+        px+=4.5;
+        if(px>380){
+         px=380;   
+        }
+    }
+    if(keys[LEFT]){
+        px-=4.5;
+        if(px<0){
+         px=0;   
+        }
+    }
+    if(keys[UP]&& jump === true && vel > 3){
+        vel=-7;
+        jump = false;
+        
+    }
+    py+=vel;
+    if(jump === false&& vel < 3){
+        vel+=0.1;
+    }
+    vel+= 0.1;
+    if(py>380){
+        py=380;
+        jump=true;
+    }
+    if(py<0){
+        py=0;
+        vel=0;
+    }
+    if(vel>4){vel=4;}
+    
+
+
+
+};
+
+//}
+
+
+function draw() {
+ bacground(255);
+ 
 }
-
-var player = {
-    x: 200,
-    y: 200,
-    s: 0,
-    rot: -90,
-    acc: 0.1,
-};
-
-draw = function() {
-    background(35, 128, 14);
-
-    if(keys[LEFT]) {
-        if(player.s > -2) {
-            player.rot --;
-        }
-    }
-    if(keys[RIGHT]) {
-        if(player.s > -2) {
-            player.rot ++;
-        }
-    }
-    if(keys[UP]) {
-        if(player.s <= 3) {
-            player.s += player.acc;
-        }
-    }
-    if(keys[DOWN]) {
-        if(player.s > -1) {
-            player.s -= player.acc;
-        }
-    }
-    if(!keys[UP] && !keys[DOWN]) {
-        if(player.s >= 0) {
-            player.s -= 0.02;
-        }
-    }
-    if(player.s < 0) {
-        player.s = 0;
-    }
-    player.x += cos(player.rot) * player.s;
-    player.y += sin(player.rot) * player.s;
-
-    player.x = constrain(player.x, 0, width);
-    player.y = constrain(player.y, 0, height);
-
-    fill(0, 0, 0);
-    push();
-    translate(player.x, player.y);
-    rotate(player.rot);
-    stroke(0);
-    rect(0, 0, 34, -20);
-
-    noStroke();
-    fill(keys[LEFT] ? 255:200, keys[LEFT] && !keys[RIGHT] ? 255:200, 0);
-    rect(18, -5, 4, 6);
-    fill(keys[RIGHT] ? 255:200, keys[RIGHT] && !keys[LEFT] ? 255:200, 0);
-    rect(18, 5, 4, 6);//The headlights
-
-    fill(keys[DOWN] || keys[LEFT] && !keys[RIGHT] ? 255: 100, 0, 0);
-    stroke(0);
-    rect(-18, -5, 4, 6);
-    fill(keys[DOWN] || keys[RIGHT] && !keys[LEFT] ? 255: 100, 0, 0);
-    rect(-18, 5, 4, 6);//The taillights
-
-    fill(77, 77, 77);
-    arc(-10, 10, 10, 5, 1, 180);
-    arc(-10, -10, 10, 5, 180, 360);
-    arc(10, -10, 10, 5, 180, 360);
-    arc(10, 10, 10, 5, 1, 180);
-    pop();
-};
