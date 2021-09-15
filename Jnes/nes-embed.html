@@ -1,18 +1,46 @@
-<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jnes</title>
 
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Embedding Example</title>
-		
-		<script type="text/javascript" src="https://unpkg.com/jsnes/dist/jsnes.min.js"></script>
-		<script type="text/javascript" src="nes-embed.js"></script>
-		<script>window.onload = function(){nes_load_url("nes-canvas", "eclipse-5214.github.io/Jnes/InterglacticTransmissing.nes");}</script>
-	</head>
-	<body>
-		<div style="margin: auto; width: 75%;">
-			<canvas id="nes-canvas" width="256" height="240" style="width: 100%"/>
-		</div>
-		<p>DPad: Arrow keys<br/>Start: Return, Select: Tab<br/>A Button: A, B Button: S</p>
-	</body>
-</html>
+	<script src="https://unpkg.com/jsnes/dist/jsnes.min.js"></script>
+	<script src="nes-embed.js"></script>
+	<script>window.onload = function () { nes_load_url("nes-canvas", "InterglacticTransmissing.nes"); }</script>
+</head>
+<body>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: black;
+		}
+
+		.nes-div {
+			width: 768px;
+			max-width: 768px;
+			height: 720px;
+			max-height: 720px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+
+		canvas {
+			image-rendering: optimizeSpeed;
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -webkit-optimize-contrast;
+			image-rendering: -o-crisp-edges;
+			image-rendering: crisp-edges;
+			-ms-interpolation-mode: nearest-neighbor;
+			image-rendering: pixelated;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<div class="nes-div">
+		<canvas id="nes-canvas" width="256" height="240">
+	</canvas></div>
+</body></html>
