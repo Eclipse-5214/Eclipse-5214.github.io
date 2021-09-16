@@ -1,0 +1,47 @@
+<html><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>mario</title>
+	 <link rel="shortcut icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP0AAADICAMAAAAUXBfQAAAAz1BMVEX39/eRRhfPjj6u6gDTkkCMPxOp6QDPjT6s7wCw8wCRRBeJMgDt5+Wu7ADIhjr49/nMhSbq9Niq2gaPNRiPMRjt4NOVSxr18/HLnDnRhkHMhSTl3NiIMAD6/f/NlDys4gSVYxWTVRbRk0uiWyPWo2zu9eOUTianyArn39zg88Cp0Qjw596WbRTJoDf8+P+aUR6BFgCy+wDKfQDc8rTz9u7UnmGNHhmkvQzq79uIIQDDfCXLljrIlSLx/+TUfUSOKxjczcjGezvj0MKOVQCOPwAqkxApAAAExklEQVR4nO3df1vaVhjG8QCJCUGECmIDRNq19sdYRV3n1nZb7br3/5pGW3mex2s3HiGEhHB//wxwkg9qr5P0EDyPMcYYY4yx9etkrmhBlp5kbnf5nfODzO20vpGxg4uiEWtHPfXUU0899ZXWyyz14v0G9Ds26e28lX7NrtfB3r4vWvaYOmaemhU/52s7Mee/2IAZvg/Ulz7qqaeeeur3U9/OXIn1U+lQN1r9cebaUK87np4W4P7e6XX3ruFvqWxVffv4ppexG6hP68PFnq9PCqHPO+3WF73E+l4tY32s/0l23KW+kKinnnrqf0T9/uo7kUxTJ9n1Oli0G/rX0u+Z9T0d7PUfsosS69MPOlHNip/zpQ9vdBcl1o+zm1Et6u92QT311Bch/xb11FPv1Mca1rmeUGa9dyq19IgH2nNtAMNP0HeiNZI9eCXT17taIAc886WkKbUTHxReyROunupm1QcfdRf1kuk13+plaxLJeW8jQS/TJzSiT6EMZvRH6GXUU0899dRTT32Z9LogAeubevW2evqfNagPj+Xx48rpfbMkwYcv68vjfXVWRS+MeID1AXJSTz311FNPPfVF64fhIsiIrT5QR1X0Sxnx//W1xeYH9D9edl8f372wbHovlabmj8BcqK27tjqfALf6cbBofFuYXpvCfwLyyh/I30Prtmi6Rz311FNPPfX7ow9R2aFw2NLp/3yKwvwjGMbDYd/pooYy6DtPItQEX7sOYHACnMBxr56XTI8+ftpepq+BYqxvg3EbTeqpp75oO/XUU099lfUp6q8mqpGga5LuuV4i/W30Oq6d6430ILaAv70co/qoHsahZbr27UkmOqk1+GefZWCzirslh3B56D76zPpWbZ3wNB6XTNDve/OXJUvb5X2gnnrqqaeeeuo31AjqHQd2Xw+v05qW6eEMeRt6/bzZLf7AmYsfGPOns4erL9Hr/rarP9TprcXrNPXI8XOZ86XBFbxQa4KnNtG7UHYH+fnp4a+7WX7k1kvxrIlwzub6xd6op5566qmnnnrq89PrItEgtnoNo+1cD18AxmapafT2ILapj1+4TtZ8yDdnOWEQg3qQH7lWwfgv4krrHXvbPT14fKnetTfqqaeeeuqpL68e3E9srkdfHPEIvQyxe3rlr69ffGStxPN81Ydn5n5iM+XD9Q99My5ex6zXlbvT/PWmVc7xjN7XBRnNmfO/QXQErNe65T3DpZ566qmnnnrq90q/0lzP9EWX75r5r95m9noX5nr10Nw3WJ/Qa08eXeNM+N0TXVaSE37D+hXO8XCR1ee/NHvDevD4kvN73D197njqqaeeeuqp33P941eqWv1nNI+9ceoPpGgobeP7cLG+5rqQC/V2nu9eu2Hw5xdSutUP4S3RrxA+x1ul4r4Hm3rqqaeeeuqp3wP9ZUvCd05wprPis+gABSeApqgwvXco/fMR3yLN1Ux6dQ77+uzhvr5xH2bepSfr3UfQrGd5lXZA6Rit3jWNS6D31tXHRo/GdX6hZIv6oqOeeuqpp36P9NfDh+vi22g59fj+XdrlaNvUdfr+Q1ysHEZ35MD6iuT8Faa+slFPPfXUU0/9fug9c/0X9m+l9SNXRR9grqErtraij48xxhhjjFW8/wCOV611GKN/mwAAAABJRU5ErkJggg=="/>
+
+	<script src="https://unpkg.com/jsnes/dist/jsnes.min.js"></script>
+	<script src="nes-embed.js"></script>
+	<script>window.onload = function () { nes_load_url("nes-canvas", "Zelda.nes"); }</script>
+</head>
+<body>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: blue;
+		}
+
+		.nes-div {
+			width: 768px;
+			max-width: 768px;
+			height: 720px;
+			max-height: 720px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+		}
+
+		canvas {
+			image-rendering: optimizeSpeed;
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -webkit-optimize-contrast;
+			image-rendering: -o-crisp-edges;
+			image-rendering: crisp-edges;
+			-ms-interpolation-mode: nearest-neighbor;
+			image-rendering: pixelated;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<div class="nes-div">
+		<canvas id="nes-canvas" width="256" height="240">
+	</canvas></div>
+</body></html>
