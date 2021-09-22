@@ -6,16 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-	    <script>
-	    var win = window,
-    doc = document,
-    docElem = doc.documentElement,
-    body = doc.getElementsByTagName('body')[0],
-    x = win.innerWidth || docElem.clientWidth || body.clientWidth,
-    y = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
-	    </script>
         <!-- Screen of the GBA.js -->
-        <canvas id="screen" width=x height=y></canvas>
+        <canvas id="screen" width=window.innerWidth height=window.innerHeight></canvas>
 
         <!-- Start Controls -->
         <div id="controls">
