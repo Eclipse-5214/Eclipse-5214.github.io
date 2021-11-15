@@ -83,7 +83,7 @@ function setup(){
 	textFont("Arial Bold", fSize);
 	frameRate(60);
 	sounds.tf=true;
-	scale(width/windowWidth, height/windowHeight);
+	scale(width/windowHeight, height/windowHeight);
 
 }
 
