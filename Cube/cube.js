@@ -7,6 +7,7 @@
 
 */
 //variables
+scale(width/windowHeight, height/windowHeight);
 {
 var win = true;
 var death = 0;
