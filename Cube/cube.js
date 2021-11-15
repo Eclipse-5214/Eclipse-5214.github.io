@@ -77,12 +77,14 @@ function preload(){
 
 //setup function
 function setup(){
-	createCanvas(400,400);
+	createCanvas(windowHeight,windowHeight);
 	noStroke();
 	textAlign(CENTER, CENTER);
 	textFont("Arial Bold", fSize);
 	frameRate(60);
 	sounds.tf=true;
+	scale(width/windowWidth, height/windowHeight);
+
 }
 
 //levels
