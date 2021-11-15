@@ -77,7 +77,7 @@ function preload(){
 
 //setup function
 function setup(){
-	createCanvas(windowWidth,windowHeight);
+	createCanvas(400,400);
 	noStroke();
 	textAlign(CENTER, CENTER);
 	textFont("Arial Bold", fSize);
