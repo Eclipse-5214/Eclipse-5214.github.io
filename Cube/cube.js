@@ -7,7 +7,7 @@
 
 */
 //variables
-scale(width/windowHeight, height/windowHeight);
+scale(windowHeight,windowHeight);
 {
 var win = true;
 var death = 0;
@@ -84,7 +84,7 @@ function setup(){
 	textFont("Arial Bold", fSize);
 	frameRate(60);
 	sounds.tf=true;
-	scale(width/windowHeight, height/windowHeight);
+	scale(windowHeight,windowHeight);
 
 }
 
