@@ -693,6 +693,7 @@ var score = function(){
 {
 
 draw = function() {
+    scale(2);
 
     if(scene===0){
         background(150,150,150);
