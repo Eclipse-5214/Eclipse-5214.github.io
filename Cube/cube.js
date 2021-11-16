@@ -30,7 +30,7 @@ var rgb = [100,100,100];
 var fade = 0;
 var time = 0;
 var sounds;
-var s = 1.7;
+var s = windowHeight/400;
 
 {var level = 0;
 var pX = 0;
