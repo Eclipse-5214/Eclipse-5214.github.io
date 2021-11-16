@@ -1131,8 +1131,8 @@ for (var i = 0; i < enemies.length; i ++) {
         enemies[i].dir = 0;
     }
 }
-if (pY > 400*s-20*s){pY=400*s-20*s;}
-if (pX > 400*s-20*s){pX=400*s-20*s;xVel=0;}
+if (pY > 400-20){pY=400-20;}
+if (pX > 400-20){pX=400-20;xVel=0;}
 if (pX < 0){pX=0;xVel=0;}
 if (levelText[level]) {
     fill(0, 0, 0);
