@@ -30,7 +30,7 @@ var rgb = [100,100,100];
 var fade = 0;
 var time = 0;
 var sounds;
-var s = windowHeight/400;
+var s = 0;
 
 {var level = 0;
 var pX = 0;
@@ -692,6 +692,7 @@ var score = function(){
 {
 
 draw = function() {
+    s=windowHeight/400;
     scale(s);
 
     if(scene===0){
