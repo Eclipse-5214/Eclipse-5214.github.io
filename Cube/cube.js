@@ -7,7 +7,6 @@
 
 */
 //variables
-scale(windowHeight,windowHeight);
 {
 var win = true;
 var death = 0;
