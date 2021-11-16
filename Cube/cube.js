@@ -1127,7 +1127,7 @@ for (var i = 0; i < enemies.length; i ++) {
     if (enemies[i].x < 1) {
         enemies[i].dir = 1;
     }
-    if (enemies[i].x > width - 21) {
+    if (enemies[i].x > 400 - 21) {
         enemies[i].dir = 0;
     }
 }
