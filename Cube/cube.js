@@ -30,6 +30,7 @@ var rgb = [100,100,100];
 var fade = 0;
 var time = 0;
 var sounds;
+var s = 1.7;
 
 {var level = 0;
 var pX = 0;
@@ -83,7 +84,6 @@ function setup(){
 	textFont("Arial Bold", fSize);
 	frameRate(60);
 	sounds.tf=true;
-	scale(windowHeight,windowHeight);
 
 }
 
@@ -596,15 +596,15 @@ var title = function(){
 
     if(play){
 			mousePressed =function(){}
-    if(mouseX>150&&mouseX<350&&mouseY>110&&mouseY<165){
+    if(mouseX>150*s&&mouseX<350*s&&mouseY>110*s&&mouseY<165*s){
         rgb[0]=125;
         mousePressed =function(){scene=1;}
     }else{rgb[0]=100;}
-    if(mouseX>150&&mouseX<350&&mouseY>300&&mouseY<355){
+    if(mouseX>150*s&&mouseX<350*s&&mouseY>300*s&&mouseY<355*s){
         rgb[2]=125;
         mousePressed =function(){scene=2; sounds.battleswing.play();}
     }else{rgb[2]=100;}
-    if(mouseX>150&&mouseX<350&&mouseY>206&&mouseY<261){
+    if(mouseX>150*s&&mouseX<350*s&&mouseY>206*s&&mouseY<261*s){
         rgb[1]=125;
         mousePressed =function(){scene=4; sounds.battleswing.play();}
     }else{rgb[1]=100;}
@@ -692,7 +692,7 @@ var score = function(){
 {
 
 draw = function() {
-    scale(2);
+    scale(s);
 
     if(scene===0){
         background(150,150,150);
