@@ -1,3 +1,15 @@
+function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    console.log('Query variable %s not found', variable);
+}
+
 /** Made with Electric Dolphin's platformer template
  * https://www.khanacademy.org/computer-programming/platformer-template/5484801669693440
 */
@@ -8,6 +20,7 @@
 */
 //variables
 {
+var iframe = (getQueryVariable('bookmarklet'));
 var win = true;
 var death = 0;
 var acceleration = 0.5;
@@ -692,7 +705,9 @@ var score = function(){
 {
 
 draw = function() {
-    s=windowHeight/400;
+    if(iframe){
+	s=300;
+    }else{s=windowHeight/400;}
     scale(s);
 
     if(scene===0){
