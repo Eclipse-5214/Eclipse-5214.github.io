@@ -10,13 +10,13 @@ var SHEEP_2048;
     var wrapper=document.createElement("div"),
     frame=document.createElement("iframe");
     frame.src="https://gba.ninja";
-    frame.width=333; // additional 30px to hide scrollbars
-    frame.height=333;
+    frame.width=280; // additional 30px to hide scrollbars
+    frame.height=280;
     frame.scrolling="no";
     applyStyles(frame,{
       position:'absolute',
-      top:'-27px',
-      left:'-27px',
+      top:'0px',
+      left:'0px',
       border:"none"
     });
     applyStyles(wrapper,{
