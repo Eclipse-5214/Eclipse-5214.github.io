@@ -1,6 +1,28 @@
 var person = prompt("Please enter your favorite io game", "here");
+var s1 = 0;
+var s2 = 0;
 
 if (person != null) {
+  
+  var size = prompt("Please enter a size, small, medium, or large", "here");
+
+  if (size !=null) {
+    
+    if(size === "small"||size === "Small"){
+        s1=280;
+        s2=280;
+    } 
+    
+    if(size === "medium"||size === "Medium"){
+        s1=560;
+        s2=560;
+    }
+    
+    if(size === "large"||size === "Large"){
+        s1=window.width;
+        s2=window.height;
+    }
+    
   var SHEEP_2048;
 (function() {
   'use strict';
@@ -51,5 +73,6 @@ if (person != null) {
       for (var script of document.querySelectorAll('script[src="https://eclipse-5214.github.io/js/Cube.js"]')) script.parentNode.removeChild(script);
     };
   }
-}()); 
+}());
+}
 }
