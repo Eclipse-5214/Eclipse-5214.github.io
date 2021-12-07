@@ -78,7 +78,7 @@ if (person != null) {
       wrapper.parentNode.removeChild(wrapper);
        }
       frame=null;
-       if(size !== "large"||size !== "Large")
+       if(size !== "large"||size !== "Large"){
       wrapper=null;
     }
       SHEEP_2048=undefined;
