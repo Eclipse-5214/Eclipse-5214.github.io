@@ -706,7 +706,7 @@ var score = function(){
 
 draw = function() {
     if(iframe==="true"){
-	s=300;
+	s=300/400;
     }else{s=windowHeight/400;}
     scale(s);
 
