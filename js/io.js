@@ -35,8 +35,8 @@ if (person != null) {
     var wrapper=document.createElement("div"),
     frame=document.createElement("iframe");
     frame.src="https://"+person;
-    frame.width=280; // additional 30px to hide scrollbars
-    frame.height=280;
+    frame.width=s1; // additional 30px to hide scrollbars
+    frame.height=s2;
     frame.scrolling="yes";
     applyStyles(frame,{
       position:'absolute',
@@ -50,8 +50,8 @@ if (person != null) {
       display:"block",
       bottom:"10px",
       left:"10px",
-      width:"280px",
-      height:"280px",
+      width:s1+"px",
+      height:s2+"px",
       overflow:"hidden",
       transition:"opacity 0.1s",
       borderRadius:"6px",
