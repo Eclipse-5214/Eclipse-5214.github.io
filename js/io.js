@@ -1,8 +1,6 @@
 var person = prompt("Please enter your favorite io game", "here");
 var s1 = 0;
 var s2 = 0;
-var s3 = 0;
-var s4 = 0;
 
 if (person != null) {
   
@@ -13,22 +11,16 @@ if (person != null) {
     if(size === "small"||size === "Small"){
         s1=280;
         s2=280;
-        s3="280px";
-        s4="280px";
     } 
     
     if(size === "medium"||size === "Medium"){
         s1=560;
         s2=560;
-        s3="560px";
-        s4="560px"
     }
     
     if(size === "large"||size === "Large"){
-        s1=window.width;
-        s2=window.height;
-        s3="10000px";
-        s4="10000px";
+        s1=windowWidth;
+        s2=windowHeight;
     }
     
   var SHEEP_2048;
