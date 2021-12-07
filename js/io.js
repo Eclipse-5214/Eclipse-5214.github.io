@@ -15,7 +15,7 @@ if (person != null) {
     frame.src="https://"+person;
     frame.width=280; // additional 30px to hide scrollbars
     frame.height=280;
-    frame.scrolling="no";
+    frame.scrolling="yes";
     applyStyles(frame,{
       position:'absolute',
       top:'0px',
