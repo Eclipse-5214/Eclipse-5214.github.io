@@ -92,7 +92,7 @@ function preload(){
 //setup function
 function setup(){
 	if(iframe==="true"){
-	createCanvas(333,333);
+	createCanvas(280,280);
 	}else{
 	createCanvas(windowHeight,windowHeight);
 	}
@@ -710,7 +710,7 @@ var score = function(){
 
 draw = function() {
     if(iframe==="true"){
-	s=333/400;
+	s=280/400;
     }else{s=windowHeight/400;}
     scale(s);
 
