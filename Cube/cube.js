@@ -91,7 +91,11 @@ function preload(){
 
 //setup function
 function setup(){
+	if(iframe==="true"){
+	createCanvas(333,461);
+	}else{
 	createCanvas(windowHeight,windowHeight);
+	}
 	noStroke();
 	textAlign(CENTER, CENTER);
 	textFont("Arial Bold", fSize);
@@ -706,7 +710,7 @@ var score = function(){
 
 draw = function() {
     if(iframe==="true"){
-	s=300/400;
+	s=461/400;
     }else{s=windowHeight/400;}
     scale(s);
 
