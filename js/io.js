@@ -84,7 +84,6 @@ if (person != null) {
       SHEEP_2048=undefined;
       for (var script of document.querySelectorAll('script[src="https://eclipse-5214.github.io/js/Cube.js"]')) script.parentNode.removeChild(script);
     };
-  }
 }());
 }
 }
