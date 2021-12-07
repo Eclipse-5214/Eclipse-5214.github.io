@@ -27,6 +27,8 @@ if (person != null) {
     if(size === "large"||size === "Large"){
         s1=window.width;
         s2=window.height;
+        s3="10000px";
+        s4="10000px";
     }
     
   var SHEEP_2048;
@@ -50,7 +52,6 @@ if (person != null) {
       left:'0px',
       border:"none"
     });
-    if(size !== "large"||size !== "Large")
     applyStyles(wrapper,{
       position:"fixed",
       zIndex:2147483647,
@@ -70,17 +71,13 @@ if (person != null) {
     function leave() {wrapper.style.opacity="0";frame.blur();}
     wrapper.addEventListener("mouseenter",enter,false);
     wrapper.addEventListener("mouseleave",leave,false);
-  }
     SHEEP_2048=()=>{
-       if(size !== "large"||size !== "Large"){
       wrapper.removeEventListener("mouseenter",enter,false);
       wrapper.removeEventListener("mouseleave",leave,false);
       wrapper.parentNode.removeChild(wrapper);
        }
       frame=null;
-       if(size !== "large"||size !== "Large"){
       wrapper=null;
-    }
       SHEEP_2048=undefined;
       for (var script of document.querySelectorAll('script[src="https://eclipse-5214.github.io/js/Cube.js"]')) script.parentNode.removeChild(script);
     };
