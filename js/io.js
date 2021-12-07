@@ -6,6 +6,7 @@ document.body.clientHeight;
 var person = prompt("Please enter your favorite io game", "here");
 var s1 = 0;
 var s2 = 0;
+var s3 = "10px";
 
 if (person != null) {
   
@@ -26,6 +27,7 @@ if (person != null) {
     if(size === "large"||size === "Large"){
         s1=w;
         s2=h;
+        s3="0px";
     }
     
   var SHEEP_2048;
