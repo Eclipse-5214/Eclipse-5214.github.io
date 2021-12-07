@@ -92,7 +92,7 @@ function preload(){
 //setup function
 function setup(){
 	if(iframe==="true"){
-	createCanvas(333,461);
+	createCanvas(333,333);
 	}else{
 	createCanvas(windowHeight,windowHeight);
 	}
