@@ -11,7 +11,7 @@ var SHEEP_2048;
     frame=document.createElement("iframe");
     frame.src="https://eclipse-5214.github.io/Cube?bookmarklet=true";
     frame.width=333; // additional 30px to hide scrollbars
-    frame.height=461;
+    frame.height=333;
     frame.scrolling="no";
     applyStyles(frame,{
       position:'absolute',
