@@ -1,3 +1,8 @@
+const width  = window.innerWidth || document.documentElement.clientWidth || 
+document.body.clientWidth;
+const height = window.innerHeight|| document.documentElement.clientHeight|| 
+document.body.clientHeight;
+
 var person = prompt("Please enter your favorite io game", "here");
 var s1 = 0;
 var s2 = 0;
@@ -19,8 +24,8 @@ if (person != null) {
     }
     
     if(size === "large"||size === "Large"){
-        s1=windowWidth;
-        s2=windowHeight;
+        s1=width;
+        s2=height;
     }
     
   var SHEEP_2048;
