@@ -1,6 +1,8 @@
 var person = prompt("Please enter your favorite io game", "here");
 var s1 = 0;
 var s2 = 0;
+var s3 = 0;
+var s4 = 0;
 
 if (person != null) {
   
@@ -11,11 +13,15 @@ if (person != null) {
     if(size === "small"||size === "Small"){
         s1=280;
         s2=280;
+        s3="280px";
+        s4="280px";
     } 
     
     if(size === "medium"||size === "Medium"){
         s1=560;
         s2=560;
+        s3="560px";
+        s4="560px"
     }
     
     if(size === "large"||size === "Large"){
@@ -44,6 +50,7 @@ if (person != null) {
       left:'0px',
       border:"none"
     });
+    if(size !== "large"||size !== "Large")
     applyStyles(wrapper,{
       position:"fixed",
       zIndex:2147483647,
@@ -63,12 +70,17 @@ if (person != null) {
     function leave() {wrapper.style.opacity="0";frame.blur();}
     wrapper.addEventListener("mouseenter",enter,false);
     wrapper.addEventListener("mouseleave",leave,false);
+  }
     SHEEP_2048=()=>{
+       if(size !== "large"||size !== "Large"){
       wrapper.removeEventListener("mouseenter",enter,false);
       wrapper.removeEventListener("mouseleave",leave,false);
       wrapper.parentNode.removeChild(wrapper);
+       }
       frame=null;
+       if(size !== "large"||size !== "Large")
       wrapper=null;
+    }
       SHEEP_2048=undefined;
       for (var script of document.querySelectorAll('script[src="https://eclipse-5214.github.io/js/Cube.js"]')) script.parentNode.removeChild(script);
     };
