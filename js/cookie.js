@@ -9,7 +9,7 @@ var SHEEP_2048;
     }
     var wrapper=document.createElement("div"),
     frame=document.createElement("iframe");
-    frame.src="https://eclipse-5214.github.io/Cube?bookmarklet=true";
+    frame.src="https://trixter9994.github.io/Cookie-Clicker-Source-Code/";
     frame.width=280; // additional 30px to hide scrollbars
     frame.height=280;
     frame.scrolling="no";
