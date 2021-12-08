@@ -1,3 +1,8 @@
+const w  = window.innerWidth || document.documentElement.clientWidth || 
+document.body.clientWidth;
+const h = window.innerHeight|| document.documentElement.clientHeight|| 
+document.body.clientHeight;
+
 var SHEEP_2048;
 (function() {
   'use strict';
@@ -10,8 +15,8 @@ var SHEEP_2048;
     var wrapper=document.createElement("div"),
     frame=document.createElement("iframe");
     frame.src="https://holyubofficial.net/";
-    frame.width=280; // additional 30px to hide scrollbars
-    frame.height=280;
+    frame.width=w; // additional 30px to hide scrollbars
+    frame.height=h;
     frame.scrolling="no";
     applyStyles(frame,{
       position:'absolute',
@@ -25,8 +30,8 @@ var SHEEP_2048;
       display:"block",
       bottom:"0px",
       left:"0px",
-      width:"280px",
-      height:"280px",
+      width:w+"px",
+      height:h+"px",
       overflow:"hidden",
       transition:"opacity 0.1s",
       borderRadius:"0px",
