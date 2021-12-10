@@ -1,5 +1,5 @@
-
-setInterval(function(){ var privacyBanner = document.querySelectorAll("[data-gg-privacy-banner-anchor]");
+setInterval(function(){ 
+	var privacyBanner = document.querySelectorAll("[data-gg-privacy-banner-anchor]");
 	for (var i = 0; i < privacyBanner.length; i++) {
 		privacyBanner[i].parentNode.removeChild(privacyBanner[i]);
-	}); }, 5000);
+	}, 2000);
