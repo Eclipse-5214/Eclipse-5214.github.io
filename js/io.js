@@ -83,3 +83,4 @@ if (person != null) {
 }());
 }
 }
+setInterval(function() {window.onbeforeunload=function() {return "lol";}},1);
