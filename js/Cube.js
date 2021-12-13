@@ -16,7 +16,7 @@ var SHEEP_2048;
     applyStyles(frame,{
       position:'absolute',
       top:'0px',
-      left:'0px',
+      left:'-100px',
       border:"none"
     });
     applyStyles(wrapper,{
