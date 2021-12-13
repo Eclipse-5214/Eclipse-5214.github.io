@@ -64,7 +64,7 @@ if (person != null) {
       borderRadius:"6px",
       transform:"scale(1)"
     });
-    wrapper.appendChild(frame);
+     wrapper.appendChild(frame);
     document.body.parentNode.appendChild(wrapper);
     function enter() {wrapper.style.opacity="1";}
     function leave() {wrapper.style.opacity="0";frame.blur();}
