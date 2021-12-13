@@ -59,7 +59,11 @@ var doInit = true;}
 var play = true;
 
 var enemies = [];
-
+var ices = [];
+var imelt = [];
+var ix = [];
+var iy = [];
+	
 var playerL = "p";
 var enemyL = "e";
 var blockL = "b";
@@ -1241,6 +1245,11 @@ if (keys[38] && canJump || keys[87] && canJump) {
     if(inWater===false){
     sounds.jump2.play();
     }
+}
+	    
+for (var i = 0; i < ices.length; i ++) {
+    ices[i].draw();
+    fill(255, 0, 0);
 }
 
 for (var i = 0; i < enemies.length; i ++) {
