@@ -134,7 +134,7 @@ var levels = [
     "",
     "p                  w",
     "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 1
-
+    
    ["",
     "",
     "",
@@ -155,7 +155,7 @@ var levels = [
     "",
     "p        ^^^       w",
     "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 2
-
+    
    ["",
     "",
     "",
@@ -176,7 +176,7 @@ var levels = [
     "",
     "p        ^^^       j",
     "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 3
-
+    
    ["",
     "",
     "",
@@ -197,7 +197,7 @@ var levels = [
     "",
     "p        ^^^       j",
     "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 4
-
+    
    ["",
     "",
     "",
@@ -209,16 +209,16 @@ var levels = [
     "",
     "",
     "",
+    "w",
+    "iiiiiiiiiiiiiiiiiii",
     "",
     "",
     "",
     "",
-    "",
-    "",
-    "p                  w",
+    "p                  j",
     "bbbbbbbbooobbbbbbbbb",
     "bbbbbbbblllbbbbbbbbb"], // Tutorial 5
-
+    
    ["",
     "",
     "",
@@ -239,7 +239,7 @@ var levels = [
     "",
     "p        eee       w",
     "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 6
-
+    
    ["bbbbbbbbbbbbbbbbbbbb",
     "bfffffffffooooooooow",
     "bffffffffff",
@@ -256,32 +256,32 @@ var levels = [
     "bbbbbbbbbbbbbbbbbbfb",
     "lllbfffffffffffffffb",
     "   bfffffffffffffffb",
-    "   ffffffbfffffffffb",
-    "   ffffffbfffffffffb",
-    "p  ffffffblfffffffjb",
+    "   ifffffbfffffffffb",
+    "   ifffffbfffffffffb",
+    "p  ifffffblfffffffjb",
     "bbbbbllllbbbbbbbbbbb"], // level 1
-
+    
    ["pb           w",
-    " b           b",
-    " b          bf",
-    " b         bff",
+    " b           i",
+    " b          if",
+    " b         iff",
     " b         f f",
     " b         f f",
-    " b     b   f f   ",
+    " b     i   f f   ",
     " b     f   f f      ",
     " b     f   f f     j",
     " b   j f   f f     f",
     " bbbbbbf   f f     f",
     " fffffbf  jf f     f",
     " fffffbfffff f     f",
-    " bbbffbf   f f     f",
+    " bbbiibf   f f     f",
     " b     f   f f j j f",
-    " b     f   f fffffff",
+    " b     f   f fffffff", 
     " b     f   f f f   f",
     " b     f   f f f   f",
     "jbeeeeefeeef f f   j",
     "bbbbbbbbbbbbbbbbbbbb"], // level 2
-
+    
    ["fffffwffffffffffffff",
     "ffffffffffffffffffff",
     "fffffffffffoffffffffb",
@@ -299,31 +299,31 @@ var levels = [
     "fbbfffffffffffffffff",
     "fbfff   fff   ffffff",
     "fb       f        ff",
-    "fb                 f",
+    "fb                 f",  
     "pb                 ^",
     "jblllllllllllllllllb"], // level 3
-
+    
    ["oooooooooowooooooooo",
     "",
     "",
     "",
     "",
-    "    ^ee^      b",
-    "    bbbb   bbb",
+    "    ^ee^      i",
+    "    bbbb   iii",
     "",
     "2                  ^",
     "jblllllllllllllllllb",
     "bbbbbbbbbbbbbbbbbbbbb",
     "ffffffffffffffffffff",
     "fff fffff  fffff fff",
-    "ff   fff    fff   ff",
+    "ff   fff    fff   ff", 
     "f  p  f      f     f",
     "f     f   ^  f   1 f",
     "f bbb f  bb  f bbb f",
     "f     f      f     f",
     "ff   fff    fff   ff",
     "lllllllllllllllllllll"], // level 4
-
+    
    ["bbbbbbbbbbbbbbbbbbbb",
     "b233333333333333333b",
     "b33rr3333gg3333BB33b",
@@ -331,26 +331,26 @@ var levels = [
     "b33rr3333gg3333BB335bbbbbb",
     "b3333333333333333335eeeeeb",
     "bbbbbbbbbbbbbbbb444bbbbbbb",
-    "b                 bb",
-    "b                b b",
-    "b               b  b",
-    "b  bb    bb    b   b",
-    "b             b    b",
-    "bw^^^^^^^^^^^b^^^^^b",
+    "b                 ib",
+    "b                i b",
+    "b               i  b",
+    "b  bb    bb    i   b",
+    "b             i    b",
+    "bw^^^^^^^^^^^i^^^^^b",
     "bbbbbbbbbbbbbbbbbbbb",
     "bfffffbffffffbffff1b",
     "b ffffbfffffflfffffb",
-    "b  fffbffbbbfffffffb",
+    "b  fffbiibbbfffffffb",
     "b   fffffffbfffffffb",
     "bp   ffffffbfffffffb",
-    "bbbbbbbbbllbbbbbbbbb"], // level 5
-
+    "bbbbbbbblllbbbbbbbbb"], // level 5
+    
    ["bbbbbbbbbbbbbbbbbbbb",
     "ggggggggggb2BBBBBBBB",
     "ggggggggggbbbbbbbbbB",
     "ggggggggggbBBBBBBBBB",
     "ggggggggggbBBBBBBBBB",
-    "ggggggggggbBbbbbBBbb",
+    "ggggggggggbBbiibBBbb",
     "ggggggggggbBbllbllbb",
     "ggggggggggbBbbbbbbbbbbbbbbbbbbbbbb",
     "ggbllllbgg4BBBBBBBBBeeeeeeeeeeeeeb",
@@ -360,15 +360,15 @@ var levels = [
     "ffffffffbfbp f f^",
     "ffffffffffbbbb44b",
     "ffffffffffb1bbeeb  b",
-    "ffbjffffffb 44bbb",
-    "ffffffffffb b  oo",
+    "ffbjffffffb i4bbb",
+    "ffffffffffb b44oo",
     "ffffffffbjblbbb",
     "llllllllllbb^^^^^^^^",
     "bbbbbbbbbbbbbbbbbbbb"], // level 6
-
+    
    ["bbbbbbbbbbbbbbbbbbbb",
     "p",
-    "bbbbbbbb bbbbbbbbbbb",
+    "bbbbbbbbibbbbbbbbbbb",
     "llllllll lllllllllll",
     "llllllll lllllllllll",
     "llllllll lllllllllll",
@@ -386,14 +386,14 @@ var levels = [
     "llllllllwlllllllllll",
     "llllllllllllllllllll",
     "bbbbbbbbbbbbbbbbbbbb"], // level 7
-
+    
    ["",
     "             b",
-    "                   o",
+    "iiiii              o",
     "l  lb   j",
     "l  lb",
-    "l  lb",
-    "l  lb              b",
+    "l  lb             i",
+    "l  lb             ib",
     "l  lb",
     "l  lb",
     "l  lb               ",
@@ -407,7 +407,7 @@ var levels = [
     "bbbbb            4b2",
     "p                4bw",
     "bbbbbbbbbbbbbbbbbbbb"], // level 8
-
+    
    ["bb     llooolbbbbbbb",
     "wb   n llloolllooooo",
     "       lllooooooo",
@@ -415,7 +415,7 @@ var levels = [
     "   o lbb bbblll   bb",
     "   bl o           ll",
     "   b             j",
-    "bbbb",
+    "iiib",
     "444o",
     "ll            o",
     "",
@@ -428,20 +428,20 @@ var levels = [
     "pb",
     "jbllllllllllllllllll",
     "bbbbbbbbbbbbbbbbbbbb"], // level 9
-
+    
     ["bbbbbbbbbbbbbbooooo",
-    "                 ^^1",
+    "              iii^^1",
     "                    ",
     "                    ",
     "                    ",
-    "      o       j     ",
+    "      o        j    ",
     "                    ",
     "                    ",
     "                    ",
     "                    ",
     "                    ",
+    "                   ",
     "      j        o    ",
-    "                    ",
     "blllllllllllllllbb  ",
     "bbbbbbbbbbbbbbbbbb  ",
     "bbbbbbbbbbbbbbbbbb  ",
@@ -449,9 +449,8 @@ var levels = [
     "           bbbbbbbbb",
     "p        eellllllll2",
     "bbbbbbbbllllbbbbbblw"], //level 10
-
-
-   ["bbbbbbbbbbbbbbbbbbbb",
+    
+    ["bbbbbbbbbbbbbbbbbbbb",
     "                    ",
     "44444444444444444444",
     "gggggggggggggggggggg",
@@ -471,12 +470,32 @@ var levels = [
     "44444444444444444444",
     "p                  ",
     "bbbbbbbbbbbbbbbbbbbb"], // GG
-
-
+    
+    ["iiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "piiiiiiiiiiiiiiiiiiii",
+    "bbbbbbbbbbbbbbbbbbbl"], // HEHEHE
+ 
 ];
 
 
-var levelText = [["This Is a Platformer\n(death count is over your head)", 200, 30], ["It has Spikes", 200, 30],["Also Jump pads", 200, 30],["& Lava", 200, 30],["Also Water", 200, 30],["Finally It Has The Infection", 200, 30],["Level 1", 360, 130],["Level 2\nWait", 200, 30],["Level 3", 200, 10],["Level 4", 200, 30],["Level 5", 200, 30],["Level 6", 100, 40],["Level 7\nDropper\n:P", 70, 150],["Level 8\nParkour!", 200, 200],["Level 9 made by Baljeet", 200, 340],["Level 10 Made by shadow", 200, 200],["Thanks for playing", 200, 230]];
+var levelText = [["This Is a Platformer\n(death count is over your head)", 200, 30], ["It has Spikes", 200, 30],["Also Jump pads", 200, 30],["& Lava", 200, 30],["Also Water\n& Ice", 200, 30],["Finally It Has The Infection", 200, 30],["Level 1", 360, 130],["Level 2\nWait", 200, 30],["Level 3", 200, 10],["Level 4", 200, 30],["Level 5", 200, 30],["Level 6", 100, 40],["Level 7\nDropper\n:P", 70, 150],["Level 8\nParkour!", 200, 200],["Level 9 made by Baljeet", 200, 340],["Level 10 Made by shadow", 200, 200],["Thanks for playing", 200, 230],["Uhh idk how u got here,\nbut here is some ice\nto play with", 200, 230]];
 }
 
 //AI
