@@ -585,7 +585,7 @@ var title = function(){
     text("Cube Effect",200,50);
     textSize(5);
     fill(50);
-    text("ver. 2.4",20,10);
+    text("ver. 3.0",20,10);
     textSize(50);
     push();
     translate(80,232);
