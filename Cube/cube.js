@@ -59,6 +59,11 @@ var doInit = true;}
 var play = true;
 
 var enemies = [];
+var ices = [];
+var imelt = [];
+var ix = [];
+var iy = [];
+
 
 var playerL = "p";
 var enemyL = "e";
@@ -77,6 +82,8 @@ var decoBlueL = "B";
 var wallL = "3";
 var platformL = "4";
 var doorL = "5";
+var iceL = "i";
+
 }
 
 function preload(){
@@ -500,6 +507,35 @@ enemy.prototype.draw = function() {
     this.y += this.yVel;
     this.yVel += enemyGravity;
 };
+	
+var ice = function(x,y){
+    this.x = x;
+    this.y = y;
+    this.ismelt = false;
+    this.meltt = 255;
+    this.ismting = false;
+};
+
+ice.prototype.draw = function() {
+    fill(0,255,255,this.meltt);
+    rect(this.x,this.y,20,20);
+    fill(255,255,255,this.meltt);
+    ellipse(this.x+5,this.y+5,5,5);
+    ellipse(this.x+15,this.y+10,5,5);
+    ellipse(this.x+5,this.y+15,5,5);
+    if(this.ismting){
+        this.meltt-=5;
+    }
+    if(this.meltt<1){
+        this.ismelt = true;
+        if(this.meltt<-500){
+            this.ismelt = false;
+            this.ismting = false;
+            this.meltt = 255;
+        }
+    }
+};
+
 
 var keys = [];
 
@@ -753,6 +789,7 @@ draw = function() {
     canJump = false;
     if (initialize) {
         enemies = [];
+	ices = [];
     }
 for (var i = 0; i < levels[level].length; i ++) {
     for (var j = 0; j < levels[level][i].length; j ++) {
@@ -815,6 +852,66 @@ for (var i = 0; i < levels[level].length; i ++) {
                 }
                 }
             break;
+	
+	    case iceL:
+               if (initialize) {
+                    ices.push(new ice(j * 20, i * 20));
+                }
+                
+                for (var k = 0; k < ices.length; k++){
+                    if(!ices[k].ismelt){
+                        ix[k] = ices[k].x;
+                        iy[k] = ices[k].y;
+                
+                if (pX + 20 > ix[k] && pX < ix[k] + 20 && pY + 20 > iy[k] && pY < iy[k] + 20) {
+                    if (pX + 20 > ix[k] + round(xVel) + 1 && pX < ix[k] + round(xVel) + 20 - (round(abs(xVel)) + 1) && pY + 20 > iy[k] && pY < iy[k] + 10) {
+                        inWater = false;
+                        yVel = 0;
+                        pY = iy[k] - 20;
+                        canJump = true;
+                        ices[k].ismting = true;
+                    }
+                    if (pX + 20 > (ix[k] + round(xVel) + 1) && pX < (ix[k] + round(xVel)) + 20 - (round(abs(xVel)) + 1) && pY + 20 > iy[k] + 20/2 && pY < (iy[k] + 20/2) + 20/2) {
+                        yVel = 0.1;
+                        pY = iy[k] + 20;
+                        ices[k].ismting = true;
+                    }
+                    if (pX + 20 > ix[k] && pX < ix[k] + 10 && pY + 20 > iy[k] + round(yVel) + 1 && pY < iy[k] + round(yVel) + 1 + 20 - (round(abs(yVel)) + 1)) {
+                        pX = ix[k] - 20;
+                        xVel = 0;
+                        ices[k].ismting = true;
+                    }
+                    if (pX + 20 > ix[k] + 10 && pX < ix[k] + 10 + 10 && pY + 20 > iy[k] + round(yVel) + 1 && pY < iy[k] + round(yVel) + 1 + 20 - (round(abs(yVel)) + 1)) {
+                        pX = ix[k] + 20;
+                        xVel = 0;
+                        ices[k].ismting = true;
+                    }
+                }
+                    }
+                
+                for (var l = 0; l < enemies.length; l ++) {
+                    if (enemies[l].x > ix[k] - 19 && enemies[l].x < ix[k] + 19 && enemies[l].y > iy[k] - 21 && enemies[l].y < iy[k] - 5) {
+                    enemies[l].yVel = 0;
+                    if (enemies[l].y > iy[k] - 20) {
+                        enemies[l].y = iy[k] - 20;
+                        enemies[l].yVel = 0;
+                    }
+                }
+                    if (enemies[l].x > ix[k] - 19 && enemies[l].x < ix[k] + 19 && enemies[l].y < iy[k] + 20 && enemies[l].y > iy[k] + 5) {
+                    enemies[l].yVel = -enemies[l].yVel/4;
+                    enemies[l].y += 2;
+                }
+                    if (enemies[l].x > ix[k] - 20 && enemies[l].x < ix[k] - 9 && enemies[l].y > iy[k] - 17 && enemies[l].y < iy[k] + 17) {
+                    enemies[l].dir = 0;
+                }
+                    if (enemies[l].x < ix[k] + 20 && enemies[l].x > ix[k] + 9 && enemies[l].y > iy[k] - 17 && enemies[l].y < iy[k] + 17) {
+                    enemies[l].dir = 1;
+                }
+                }
+                }
+                
+            break;
+            
 
             case doorL:
                 fill(0, 0, 0);
@@ -1135,6 +1232,11 @@ if (keys[38] && canJump || keys[87] && canJump) {
     if(inWater===false){
     sounds.jump2.play();
     }
+}
+	    
+for (var i = 0; i < ices.length; i ++) {
+    ices[i].draw();
+    fill(255, 0, 0);
 }
 
 for (var i = 0; i < enemies.length; i ++) {
