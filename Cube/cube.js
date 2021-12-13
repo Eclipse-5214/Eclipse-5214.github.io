@@ -617,7 +617,7 @@ var title = function(){
     popMatrix();
     pushMatrix();
     translate(80,332);
-    rotate((radians(angle));
+    rotate(radians(angle));
     fill(0);
     rect(-30,-30,60,60,10);
     popMatrix(); 
