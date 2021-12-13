@@ -15,8 +15,8 @@ var SHEEP_2048;
     frame.scrolling="no";
     applyStyles(frame,{
       position:'absolute',
-      top:'0px',
-      left:'-100px',
+      top:'-20px',
+      left:'-80px',
       border:"none"
     });
     applyStyles(wrapper,{
