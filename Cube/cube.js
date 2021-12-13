@@ -127,7 +127,7 @@ var levels = [
     "",
     "p                  w",
     "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 1
-
+    
    ["",
     "",
     "",
@@ -148,7 +148,7 @@ var levels = [
     "",
     "p        ^^^       w",
     "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 2
-
+    
    ["",
     "",
     "",
@@ -169,7 +169,7 @@ var levels = [
     "",
     "p        ^^^       j",
     "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 3
-
+    
    ["",
     "",
     "",
@@ -190,7 +190,7 @@ var levels = [
     "",
     "p        ^^^       j",
     "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 4
-
+    
    ["",
     "",
     "",
@@ -202,16 +202,16 @@ var levels = [
     "",
     "",
     "",
+    "w",
+    "iiiiiiiiiiiiiiiiiii",
     "",
     "",
     "",
     "",
-    "",
-    "",
-    "p                  w",
+    "p                  j",
     "bbbbbbbbooobbbbbbbbb",
     "bbbbbbbblllbbbbbbbbb"], // Tutorial 5
-
+    
    ["",
     "",
     "",
@@ -232,7 +232,7 @@ var levels = [
     "",
     "p        eee       w",
     "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 6
-
+    
    ["bbbbbbbbbbbbbbbbbbbb",
     "bfffffffffooooooooow",
     "bffffffffff",
@@ -249,32 +249,32 @@ var levels = [
     "bbbbbbbbbbbbbbbbbbfb",
     "lllbfffffffffffffffb",
     "   bfffffffffffffffb",
-    "   ffffffbfffffffffb",
-    "   ffffffbfffffffffb",
-    "p  ffffffblfffffffjb",
+    "   ifffffbfffffffffb",
+    "   ifffffbfffffffffb",
+    "p  ifffffblfffffffjb",
     "bbbbbllllbbbbbbbbbbb"], // level 1
-
+    
    ["pb           w",
-    " b           b",
-    " b          bf",
-    " b         bff",
+    " b           i",
+    " b          if",
+    " b         iff",
     " b         f f",
     " b         f f",
-    " b     b   f f   ",
+    " b     i   f f   ",
     " b     f   f f      ",
     " b     f   f f     j",
     " b   j f   f f     f",
     " bbbbbbf   f f     f",
     " fffffbf  jf f     f",
     " fffffbfffff f     f",
-    " bbbffbf   f f     f",
+    " bbbiibf   f f     f",
     " b     f   f f j j f",
-    " b     f   f fffffff",
+    " b     f   f fffffff", 
     " b     f   f f f   f",
     " b     f   f f f   f",
     "jbeeeeefeeef f f   j",
     "bbbbbbbbbbbbbbbbbbbb"], // level 2
-
+    
    ["fffffwffffffffffffff",
     "ffffffffffffffffffff",
     "fffffffffffoffffffffb",
@@ -292,31 +292,31 @@ var levels = [
     "fbbfffffffffffffffff",
     "fbfff   fff   ffffff",
     "fb       f        ff",
-    "fb                 f",
+    "fb                 f",  
     "pb                 ^",
     "jblllllllllllllllllb"], // level 3
-
+    
    ["oooooooooowooooooooo",
     "",
     "",
     "",
     "",
-    "    ^ee^      b",
-    "    bbbb   bbb",
+    "    ^ee^      i",
+    "    bbbb   iii",
     "",
     "2                  ^",
     "jblllllllllllllllllb",
     "bbbbbbbbbbbbbbbbbbbbb",
     "ffffffffffffffffffff",
     "fff fffff  fffff fff",
-    "ff   fff    fff   ff",
+    "ff   fff    fff   ff", 
     "f  p  f      f     f",
     "f     f   ^  f   1 f",
     "f bbb f  bb  f bbb f",
     "f     f      f     f",
     "ff   fff    fff   ff",
     "lllllllllllllllllllll"], // level 4
-
+    
    ["bbbbbbbbbbbbbbbbbbbb",
     "b233333333333333333b",
     "b33rr3333gg3333BB33b",
@@ -324,26 +324,26 @@ var levels = [
     "b33rr3333gg3333BB335bbbbbb",
     "b3333333333333333335eeeeeb",
     "bbbbbbbbbbbbbbbb444bbbbbbb",
-    "b                 bb",
-    "b                b b",
-    "b               b  b",
-    "b  bb    bb    b   b",
-    "b             b    b",
-    "bw^^^^^^^^^^^b^^^^^b",
+    "b                 ib",
+    "b                i b",
+    "b               i  b",
+    "b  bb    bb    i   b",
+    "b             i    b",
+    "bw^^^^^^^^^^^i^^^^^b",
     "bbbbbbbbbbbbbbbbbbbb",
     "bfffffbffffffbffff1b",
     "b ffffbfffffflfffffb",
-    "b  fffbffbbbfffffffb",
+    "b  fffbiibbbfffffffb",
     "b   fffffffbfffffffb",
     "bp   ffffffbfffffffb",
-    "bbbbbbbbbllbbbbbbbbb"], // level 5
-
+    "bbbbbbbblllbbbbbbbbb"], // level 5
+    
    ["bbbbbbbbbbbbbbbbbbbb",
     "ggggggggggb2BBBBBBBB",
     "ggggggggggbbbbbbbbbB",
     "ggggggggggbBBBBBBBBB",
     "ggggggggggbBBBBBBBBB",
-    "ggggggggggbBbbbbBBbb",
+    "ggggggggggbBbiibBBbb",
     "ggggggggggbBbllbllbb",
     "ggggggggggbBbbbbbbbbbbbbbbbbbbbbbb",
     "ggbllllbgg4BBBBBBBBBeeeeeeeeeeeeeb",
@@ -353,15 +353,15 @@ var levels = [
     "ffffffffbfbp f f^",
     "ffffffffffbbbb44b",
     "ffffffffffb1bbeeb  b",
-    "ffbjffffffb 44bbb",
-    "ffffffffffb b  oo",
+    "ffbjffffffb i4bbb",
+    "ffffffffffb b44oo",
     "ffffffffbjblbbb",
     "llllllllllbb^^^^^^^^",
     "bbbbbbbbbbbbbbbbbbbb"], // level 6
-
+    
    ["bbbbbbbbbbbbbbbbbbbb",
     "p",
-    "bbbbbbbb bbbbbbbbbbb",
+    "bbbbbbbbibbbbbbbbbbb",
     "llllllll lllllllllll",
     "llllllll lllllllllll",
     "llllllll lllllllllll",
@@ -379,14 +379,14 @@ var levels = [
     "llllllllwlllllllllll",
     "llllllllllllllllllll",
     "bbbbbbbbbbbbbbbbbbbb"], // level 7
-
+    
    ["",
     "             b",
-    "                   o",
+    "iiiii              o",
     "l  lb   j",
     "l  lb",
-    "l  lb",
-    "l  lb              b",
+    "l  lb             i",
+    "l  lb             ib",
     "l  lb",
     "l  lb",
     "l  lb               ",
@@ -400,7 +400,7 @@ var levels = [
     "bbbbb            4b2",
     "p                4bw",
     "bbbbbbbbbbbbbbbbbbbb"], // level 8
-
+    
    ["bb     llooolbbbbbbb",
     "wb   n llloolllooooo",
     "       lllooooooo",
@@ -408,7 +408,7 @@ var levels = [
     "   o lbb bbblll   bb",
     "   bl o           ll",
     "   b             j",
-    "bbbb",
+    "iiib",
     "444o",
     "ll            o",
     "",
@@ -421,20 +421,20 @@ var levels = [
     "pb",
     "jbllllllllllllllllll",
     "bbbbbbbbbbbbbbbbbbbb"], // level 9
-
+    
     ["bbbbbbbbbbbbbbooooo",
-    "                 ^^1",
+    "              iii^^1",
     "                    ",
     "                    ",
     "                    ",
-    "      o       j     ",
+    "      o        j    ",
     "                    ",
     "                    ",
     "                    ",
     "                    ",
     "                    ",
+    "                   ",
     "      j        o    ",
-    "                    ",
     "blllllllllllllllbb  ",
     "bbbbbbbbbbbbbbbbbb  ",
     "bbbbbbbbbbbbbbbbbb  ",
@@ -442,9 +442,8 @@ var levels = [
     "           bbbbbbbbb",
     "p        eellllllll2",
     "bbbbbbbbllllbbbbbblw"], //level 10
-
-
-   ["bbbbbbbbbbbbbbbbbbbb",
+    
+    ["bbbbbbbbbbbbbbbbbbbb",
     "                    ",
     "44444444444444444444",
     "gggggggggggggggggggg",
@@ -464,12 +463,32 @@ var levels = [
     "44444444444444444444",
     "p                  ",
     "bbbbbbbbbbbbbbbbbbbb"], // GG
-
-
+    
+    ["iiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "iiiiiiiiiiiiiiiiiiiii",
+    "piiiiiiiiiiiiiiiiiiii",
+    "bbbbbbbbbbbbbbbbbbbl"], // HEHEHE
+ 
 ];
 
 
-var levelText = [["This Is a Platformer\n(death count is over your head)", 200, 30], ["It has Spikes", 200, 30],["Also Jump pads", 200, 30],["& Lava", 200, 30],["Also Water", 200, 30],["Finally It Has The Infection", 200, 30],["Level 1", 360, 130],["Level 2\nWait", 200, 30],["Level 3", 200, 10],["Level 4", 200, 30],["Level 5", 200, 30],["Level 6", 100, 40],["Level 7\nDropper\n:P", 70, 150],["Level 8\nParkour!", 200, 200],["Level 9 made by Baljeet", 200, 340],["Level 10 Made by shadow", 200, 200],["Thanks for playing", 200, 230]];
+var levelText = [["This Is a Platformer\n(death count is over your head)", 200, 30], ["It has Spikes", 200, 30],["Also Jump pads", 200, 30],["& Lava", 200, 30],["Also Water\n& Ice", 200, 30],["Finally It Has The Infection", 200, 30],["Level 1", 360, 130],["Level 2\nWait", 200, 30],["Level 3", 200, 10],["Level 4", 200, 30],["Level 5", 200, 30],["Level 6", 100, 40],["Level 7\nDropper\n:P", 70, 150],["Level 8\nParkour!", 200, 200],["Level 9 made by Baljeet", 200, 340],["Level 10 Made by shadow", 200, 200],["Thanks for playing", 200, 230],["Uhh idk how u got here,\nbut here is some ice\nto play with", 200, 230]];
 }
 
 //AI
@@ -499,6 +518,34 @@ enemy.prototype.draw = function() {
     }
     this.y += this.yVel;
     this.yVel += enemyGravity;
+};
+
+var ice = function(x,y){
+    this.x = x;
+    this.y = y;
+    this.ismelt = false;
+    this.meltt = 255;
+    this.ismting = false;
+};
+
+ice.prototype.draw = function() {
+    fill(0,255,255,this.meltt);
+    rect(this.x,this.y,20,20);
+    fill(255,255,255,this.meltt);
+    ellipse(this.x+5,this.y+5,5,5);
+    ellipse(this.x+15,this.y+10,5,5);
+    ellipse(this.x+5,this.y+15,5,5);
+    if(this.ismting){
+        this.meltt-=5;
+    }
+    if(this.meltt<1){
+        this.ismelt = true;
+        if(this.meltt<-500){
+            this.ismelt = false;
+            this.ismting = false;
+            this.meltt = 255;
+        }
+    }
 };
 
 var keys = [];
@@ -814,6 +861,65 @@ for (var i = 0; i < levels[level].length; i ++) {
                     enemies[l].dir = 1;
                 }
                 }
+            break;
+	
+	    case iceL:
+               if (initialize) {
+                    ices.push(new ice(j * 20, i * 20));
+                }
+                
+                for (var k = 0; k < ices.length; k++){
+                    if(!ices[k].ismelt){
+                        ix[k] = ices[k].x;
+                        iy[k] = ices[k].y;
+                
+                if (pX + 20 > ix[k] && pX < ix[k] + 20 && pY + 20 > iy[k] && pY < iy[k] + 20) {
+                    if (pX + 20 > ix[k] + round(xVel) + 1 && pX < ix[k] + round(xVel) + 20 - (round(abs(xVel)) + 1) && pY + 20 > iy[k] && pY < iy[k] + 10) {
+                        inWater = false;
+                        yVel = 0;
+                        pY = iy[k] - 20;
+                        canJump = true;
+                        ices[k].ismting = true;
+                    }
+                    if (pX + 20 > (ix[k] + round(xVel) + 1) && pX < (ix[k] + round(xVel)) + 20 - (round(abs(xVel)) + 1) && pY + 20 > iy[k] + 20/2 && pY < (iy[k] + 20/2) + 20/2) {
+                        yVel = 0.1;
+                        pY = iy[k] + 20;
+                        ices[k].ismting = true;
+                    }
+                    if (pX + 20 > ix[k] && pX < ix[k] + 10 && pY + 20 > iy[k] + round(yVel) + 1 && pY < iy[k] + round(yVel) + 1 + 20 - (round(abs(yVel)) + 1)) {
+                        pX = ix[k] - 20;
+                        xVel = 0;
+                        ices[k].ismting = true;
+                    }
+                    if (pX + 20 > ix[k] + 10 && pX < ix[k] + 10 + 10 && pY + 20 > iy[k] + round(yVel) + 1 && pY < iy[k] + round(yVel) + 1 + 20 - (round(abs(yVel)) + 1)) {
+                        pX = ix[k] + 20;
+                        xVel = 0;
+                        ices[k].ismting = true;
+                    }
+                }
+                    }
+                
+                for (var l = 0; l < enemies.length; l ++) {
+                    if (enemies[l].x > ix[k] - 19 && enemies[l].x < ix[k] + 19 && enemies[l].y > iy[k] - 21 && enemies[l].y < iy[k] - 5) {
+                    enemies[l].yVel = 0;
+                    if (enemies[l].y > iy[k] - 20) {
+                        enemies[l].y = iy[k] - 20;
+                        enemies[l].yVel = 0;
+                    }
+                }
+                    if (enemies[l].x > ix[k] - 19 && enemies[l].x < ix[k] + 19 && enemies[l].y < iy[k] + 20 && enemies[l].y > iy[k] + 5) {
+                    enemies[l].yVel = -enemies[l].yVel/4;
+                    enemies[l].y += 2;
+                }
+                    if (enemies[l].x > ix[k] - 20 && enemies[l].x < ix[k] - 9 && enemies[l].y > iy[k] - 17 && enemies[l].y < iy[k] + 17) {
+                    enemies[l].dir = 0;
+                }
+                    if (enemies[l].x < ix[k] + 20 && enemies[l].x > ix[k] + 9 && enemies[l].y > iy[k] - 17 && enemies[l].y < iy[k] + 17) {
+                    enemies[l].dir = 1;
+                }
+                }
+                }
+                
             break;
 
             case doorL:
