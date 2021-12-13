@@ -98,63 +98,63 @@ function preload(){
 
 //setup function
 function setup(){
-	if(iframe==="true"){
-	createCanvas(280,280);
-	}else{
-	createCanvas(windowHeight,windowHeight);
+	if (iframe==="true") {
+		createCanvas(280,280);
+	} else {
+		var canvas = createCanvas(windowHeight, windowHeight);
+		canvas.parent('script-holder');
 	}
 	noStroke();
 	textAlign(CENTER, CENTER);
 	textFont("Arial Bold", fSize);
 	frameRate(60);
 	sounds.tf=true;
-
 }
 
 //levels
 {
 var levels = [
-   ["",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "p                  w",
-    "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 1
-    
-   ["",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-    "p        ^^^       w",
-    "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 2
+["",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"p                  w",
+"bbbbbbbbbbbbbbbbbbbb"], // Tutorial 1
+
+["",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"p        ^^^       w",
+"bbbbbbbbbbbbbbbbbbbb"], // Tutorial 2
     
    ["",
     "",
