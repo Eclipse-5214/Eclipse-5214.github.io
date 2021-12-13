@@ -570,18 +570,18 @@ keyReleased = function() {
 //titlescreen
 {
 var title = function(){
-    push();
+    pushMatrix();
     translate(200,300);
-    rotate(radians(45));
+    rotate(45);
     fill(59, 59, 59);
     rect(0,-300,40,600);
-    pop();
-    push();
+    popMatrix();
+    pushMatrix();
     translate(200,100);
-    rotate(radians(45));
+    rotate(45);
     fill(59, 59, 59);
     rect(0,-200,40,600);
-    pop();
+    popMatrix();
     textSize(50);
     fill(0);
     text("Cube Effect",210,52);
@@ -589,47 +589,47 @@ var title = function(){
     text("Cube Effect",200,50);
     textSize(5);
     fill(50);
-    text("ver. 2.4",20,10);
+    text("ver. 3.0",20,10);
     textSize(50);
-    push();
+    pushMatrix();
     translate(80,232);
-    rotate(radians(angle));
+    rotate(angle);
     fill(0);
     rect(-30,-30,60,60,10);
-    pop();
-    push();
+    popMatrix(); 
+    pushMatrix();
     translate(70,230);
-    rotate(radians(angle));
+    rotate(angle);
     fill(255, 127, 127);
     rect(-30,-30,60,60,10);
-    pop();
-    push();
+    popMatrix();
+    pushMatrix();
     translate(80,142);
-    rotate(radians(angle));
+    rotate(angle);
     fill(0);
     rect(-30,-30,60,60,10);
-    pop();
-    push();
+    popMatrix(); 
+    pushMatrix();
     translate(70,140);
-    rotate(radians(angle));
+    rotate(angle);
     fill(244, 127, 255);
     rect(-30,-30,60,60,10);
-    pop();
-    push();
+    popMatrix();
+    pushMatrix();
     translate(80,332);
-    rotate(radians(angle));
+    rotate(angle);
     fill(0);
     rect(-30,-30,60,60,10);
-    pop();
-    push();
+    popMatrix(); 
+    pushMatrix();
     translate(70,330);
-    rotate(radians(angle));
+    rotate(angle);
     fill(100, pulse, pulse);
     rect(-30,-30,60,60,10);
-    pop();
+    popMatrix();
     fill(0);
     rect(160,116,200,55,10);
-    fill(rgb[0]);
+    fill(rgb[1]);
     rect(150,110,200,55,10);
     fill(0);
     text("Play",260,136);
@@ -637,7 +637,7 @@ var title = function(){
     text("Play",250,133);
     fill(0);
     rect(160,206,200,55,10);
-    fill(rgb[1]);
+    fill(rgb[3]);
     rect(150,200,200,55,10);
     fill(0);
     textSize(29);
@@ -658,28 +658,25 @@ var title = function(){
     fill(0,0,0,fade);
     rect(0,0,400,400);
     fade-=5;
-
     if(level>0){
         textSize(80);
         fill(255, 0, 0);
         text("CHEATER",200,200);
         play = false;
     }else{play = true;}
-
     if(play){
-			mousePressed =function(){}
-    if(mouseX>150*s&&mouseX<350*s&&mouseY>110*s&&mouseY<165*s){
-        rgb[0]=125;
-        mousePressed =function(){scene=1;}
-    }else{rgb[0]=100;}
-    if(mouseX>150*s&&mouseX<350*s&&mouseY>300*s&&mouseY<355*s){
-        rgb[2]=125;
-        mousePressed =function(){scene=2; sounds.battleswing.play();}
-    }else{rgb[2]=100;}
-    if(mouseX>150*s&&mouseX<350*s&&mouseY>206*s&&mouseY<261*s){
+    if(mouseX>150&&mouseX<350&&mouseY>110&&mouseY<165){
         rgb[1]=125;
-        mousePressed =function(){scene=4; sounds.battleswing.play();}
+        if(mouseIsPressed){scene=1;}
     }else{rgb[1]=100;}
+    if(mouseX>150&&mouseX<350&&mouseY>300&&mouseY<355){
+        rgb[2]=125;
+        if(mouseIsPressed){scene=2; playSound(getSound("rpg/battle-swing"));}
+    }else{rgb[2]=100;}
+    if(mouseX>150&&mouseX<350&&mouseY>206&&mouseY<261){
+        rgb[3]=125;
+        if(mouseIsPressed){scene=4; playSound(getSound("rpg/battle-swing"));}
+    }else{rgb[3]=100;}
     }
 };
 }
@@ -687,25 +684,25 @@ var title = function(){
 //credits
 {
 var help = function(){
-    push();
+    pushMatrix();
     translate(200,300);
-    rotate(radians(45));
+    rotate(45);
     fill(59, 59, 59);
     rect(0,-300,40,600);
-    pop();
-    push();
+    popMatrix();
+    pushMatrix();
     translate(200,100);
-    rotate(radians(45));
+    rotate(45);
     fill(59, 59, 59);
     rect(0,-200,40,600);
-    pop();
+    popMatrix();
     fill(100);
     rect(30,30,340,340,10);
     fill(150);
     textSize(15);
     text("This is a platformer made\nwith Electric Dolphin's \nplatformer template.\n\nI have pretty much changed\neverything exept for the \ncollision, some of the\n blocks, and the player.\n I have made some new \nblocks  too! You will learn the\n basics in the tutorial, but\n I forgot to mention the teleporter.\nThat is self explanitory though.\n\nHave fun!\nmade in two months\nall levels are posible\n(Click anywhere to continue)",200,200);
-
-    mousePressed = function() {scene=0;sounds.battleswing.play();};
+    
+    mouseClicked = function() {scene=0;playSound(getSound("rpg/battle-swing"));};
 };
 }
 
@@ -716,47 +713,46 @@ var intro = function(){
     stroke(255);
     strokeWeight(20);
     ellipse(200,220,200,200);
-		noStroke();
     textSize(50);
     fill(255);
     text("Eclipse Games",200,60);
-    push();
+    pushMatrix();
     translate(200,220);
-    rotate(radians(270));
-    arc(0, 0, 200, 200, 0, PI, PIE);
-    pop();
+    rotate(270);
+    arc(0, 0, 200, 200, 1, 180);
+    popMatrix();
     noStroke();
     fill(0,0,0,fade);
     rect(0,0,400,400);
     time++;
     if(time>100){fade+=5;}
     if(fade>300){scene=0;}
-
+    
 };
 }
 
 //Leaderboard
-{
+{   
 var score = function(){
-    push();
+    pushMatrix();
     translate(200,300);
-    rotate(radians(45));
+    rotate(45);
     fill(59, 59, 59);
     rect(0,-300,40,600);
-    pop();
-    push();
+    popMatrix();
+    pushMatrix();
     translate(200,100);
-    rotate(radians(45));
+    rotate(45);
     fill(59, 59, 59);
     rect(0,-200,40,600);
-    pop();
+    popMatrix();
     fill(100);
     rect(30,30,340,340,10);
     fill(150);
     textSize(15);
-    text("River 13 deaths\nMe 29 deaths\nAdventuremen 729\n\npost your scores in the comments\n to get on the leaderboard\n(click to continue)",200,200);
-
-};
+    text("Shadow 13 deaths (on version 2.4)\nMe 29 deaths (on version 2.4)\nAdventuremen 729 deaths (on version 2.4)\n\npost your scores in the comments\n to get on the leaderboard\n(click to continue)",200,200);
+    
+};    
 
 }
 
