@@ -10,13 +10,13 @@ var SHEEP_2048;
     var wrapper=document.createElement("div"),
     frame=document.createElement("iframe");
     frame.src="https://eclipse-5214.github.io/Cube?bookmarklet=true";
-    frame.width=333; // additional 30px to hide scrollbars
-    frame.height=333;
+    frame.width=280; // additional 30px to hide scrollbars
+    frame.height=280;
     frame.scrolling="no";
     applyStyles(frame,{
       position:'absolute',
-      top:'-20px',
-      left:'-80px',
+      top:'px',
+      left:'px',
       border:"none"
     });
     applyStyles(wrapper,{
