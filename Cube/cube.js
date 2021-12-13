@@ -808,6 +808,7 @@ draw = function() {
     canJump = false;
     if (initialize) {
         enemies = [];
+	ices = [];
     }
 for (var i = 0; i < levels[level].length; i ++) {
     for (var j = 0; j < levels[level][i].length; j ++) {
