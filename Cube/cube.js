@@ -59,11 +59,6 @@ var doInit = true;}
 var play = true;
 
 var enemies = [];
-var ices = [];
-var imelt = [];
-var ix = [];
-var iy = [];
-
 
 var playerL = "p";
 var enemyL = "e";
@@ -82,8 +77,6 @@ var decoBlueL = "B";
 var wallL = "3";
 var platformL = "4";
 var doorL = "5";
-var iceL = "i";
-
 }
 
 function preload(){
@@ -98,64 +91,64 @@ function preload(){
 
 //setup function
 function setup(){
-	if (iframe==="true") {
-		createCanvas(280,280);
-	} else {
-		var canvas = createCanvas(windowHeight, windowHeight);
-		canvas.parent('script-holder');
+	if(iframe==="true"){
+	createCanvas(280,280);
+	}else{
+	createCanvas(windowHeight,windowHeight);
 	}
 	noStroke();
 	textAlign(CENTER, CENTER);
 	textFont("Arial Bold", fSize);
 	frameRate(60);
 	sounds.tf=true;
+
 }
 
 //levels
 {
 var levels = [
-["",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"p                  w",
-"bbbbbbbbbbbbbbbbbbbb"], // Tutorial 1
+   ["",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "p                  w",
+    "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 1
 
-["",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"",
-"p        ^^^       w",
-"bbbbbbbbbbbbbbbbbbbb"], // Tutorial 2
-    
+   ["",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "p        ^^^       w",
+    "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 2
+
    ["",
     "",
     "",
@@ -176,7 +169,7 @@ var levels = [
     "",
     "p        ^^^       j",
     "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 3
-    
+
    ["",
     "",
     "",
@@ -197,7 +190,7 @@ var levels = [
     "",
     "p        ^^^       j",
     "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 4
-    
+
    ["",
     "",
     "",
@@ -209,16 +202,16 @@ var levels = [
     "",
     "",
     "",
-    "w",
-    "iiiiiiiiiiiiiiiiiii",
     "",
     "",
     "",
     "",
-    "p                  j",
+    "",
+    "",
+    "p                  w",
     "bbbbbbbbooobbbbbbbbb",
     "bbbbbbbblllbbbbbbbbb"], // Tutorial 5
-    
+
    ["",
     "",
     "",
@@ -239,7 +232,7 @@ var levels = [
     "",
     "p        eee       w",
     "bbbbbbbbbbbbbbbbbbbb"], // Tutorial 6
-    
+
    ["bbbbbbbbbbbbbbbbbbbb",
     "bfffffffffooooooooow",
     "bffffffffff",
@@ -256,32 +249,32 @@ var levels = [
     "bbbbbbbbbbbbbbbbbbfb",
     "lllbfffffffffffffffb",
     "   bfffffffffffffffb",
-    "   ifffffbfffffffffb",
-    "   ifffffbfffffffffb",
-    "p  ifffffblfffffffjb",
+    "   ffffffbfffffffffb",
+    "   ffffffbfffffffffb",
+    "p  ffffffblfffffffjb",
     "bbbbbllllbbbbbbbbbbb"], // level 1
-    
+
    ["pb           w",
-    " b           i",
-    " b          if",
-    " b         iff",
+    " b           b",
+    " b          bf",
+    " b         bff",
     " b         f f",
     " b         f f",
-    " b     i   f f   ",
+    " b     b   f f   ",
     " b     f   f f      ",
     " b     f   f f     j",
     " b   j f   f f     f",
     " bbbbbbf   f f     f",
     " fffffbf  jf f     f",
     " fffffbfffff f     f",
-    " bbbiibf   f f     f",
+    " bbbffbf   f f     f",
     " b     f   f f j j f",
-    " b     f   f fffffff", 
+    " b     f   f fffffff",
     " b     f   f f f   f",
     " b     f   f f f   f",
     "jbeeeeefeeef f f   j",
     "bbbbbbbbbbbbbbbbbbbb"], // level 2
-    
+
    ["fffffwffffffffffffff",
     "ffffffffffffffffffff",
     "fffffffffffoffffffffb",
@@ -299,31 +292,31 @@ var levels = [
     "fbbfffffffffffffffff",
     "fbfff   fff   ffffff",
     "fb       f        ff",
-    "fb                 f",  
+    "fb                 f",
     "pb                 ^",
     "jblllllllllllllllllb"], // level 3
-    
+
    ["oooooooooowooooooooo",
     "",
     "",
     "",
     "",
-    "    ^ee^      i",
-    "    bbbb   iii",
+    "    ^ee^      b",
+    "    bbbb   bbb",
     "",
     "2                  ^",
     "jblllllllllllllllllb",
     "bbbbbbbbbbbbbbbbbbbbb",
     "ffffffffffffffffffff",
     "fff fffff  fffff fff",
-    "ff   fff    fff   ff", 
+    "ff   fff    fff   ff",
     "f  p  f      f     f",
     "f     f   ^  f   1 f",
     "f bbb f  bb  f bbb f",
     "f     f      f     f",
     "ff   fff    fff   ff",
     "lllllllllllllllllllll"], // level 4
-    
+
    ["bbbbbbbbbbbbbbbbbbbb",
     "b233333333333333333b",
     "b33rr3333gg3333BB33b",
@@ -331,26 +324,26 @@ var levels = [
     "b33rr3333gg3333BB335bbbbbb",
     "b3333333333333333335eeeeeb",
     "bbbbbbbbbbbbbbbb444bbbbbbb",
-    "b                 ib",
-    "b                i b",
-    "b               i  b",
-    "b  bb    bb    i   b",
-    "b             i    b",
-    "bw^^^^^^^^^^^i^^^^^b",
+    "b                 bb",
+    "b                b b",
+    "b               b  b",
+    "b  bb    bb    b   b",
+    "b             b    b",
+    "bw^^^^^^^^^^^b^^^^^b",
     "bbbbbbbbbbbbbbbbbbbb",
     "bfffffbffffffbffff1b",
     "b ffffbfffffflfffffb",
-    "b  fffbiibbbfffffffb",
+    "b  fffbffbbbfffffffb",
     "b   fffffffbfffffffb",
     "bp   ffffffbfffffffb",
-    "bbbbbbbblllbbbbbbbbb"], // level 5
-    
+    "bbbbbbbbbllbbbbbbbbb"], // level 5
+
    ["bbbbbbbbbbbbbbbbbbbb",
     "ggggggggggb2BBBBBBBB",
     "ggggggggggbbbbbbbbbB",
     "ggggggggggbBBBBBBBBB",
     "ggggggggggbBBBBBBBBB",
-    "ggggggggggbBbiibBBbb",
+    "ggggggggggbBbbbbBBbb",
     "ggggggggggbBbllbllbb",
     "ggggggggggbBbbbbbbbbbbbbbbbbbbbbbb",
     "ggbllllbgg4BBBBBBBBBeeeeeeeeeeeeeb",
@@ -360,15 +353,15 @@ var levels = [
     "ffffffffbfbp f f^",
     "ffffffffffbbbb44b",
     "ffffffffffb1bbeeb  b",
-    "ffbjffffffb i4bbb",
-    "ffffffffffb b44oo",
+    "ffbjffffffb 44bbb",
+    "ffffffffffb b  oo",
     "ffffffffbjblbbb",
     "llllllllllbb^^^^^^^^",
     "bbbbbbbbbbbbbbbbbbbb"], // level 6
-    
+
    ["bbbbbbbbbbbbbbbbbbbb",
     "p",
-    "bbbbbbbbibbbbbbbbbbb",
+    "bbbbbbbb bbbbbbbbbbb",
     "llllllll lllllllllll",
     "llllllll lllllllllll",
     "llllllll lllllllllll",
@@ -386,14 +379,14 @@ var levels = [
     "llllllllwlllllllllll",
     "llllllllllllllllllll",
     "bbbbbbbbbbbbbbbbbbbb"], // level 7
-    
+
    ["",
     "             b",
-    "iiiii              o",
+    "                   o",
     "l  lb   j",
     "l  lb",
-    "l  lb             i",
-    "l  lb             ib",
+    "l  lb",
+    "l  lb              b",
     "l  lb",
     "l  lb",
     "l  lb               ",
@@ -407,7 +400,7 @@ var levels = [
     "bbbbb            4b2",
     "p                4bw",
     "bbbbbbbbbbbbbbbbbbbb"], // level 8
-    
+
    ["bb     llooolbbbbbbb",
     "wb   n llloolllooooo",
     "       lllooooooo",
@@ -415,7 +408,7 @@ var levels = [
     "   o lbb bbblll   bb",
     "   bl o           ll",
     "   b             j",
-    "iiib",
+    "bbbb",
     "444o",
     "ll            o",
     "",
@@ -428,20 +421,20 @@ var levels = [
     "pb",
     "jbllllllllllllllllll",
     "bbbbbbbbbbbbbbbbbbbb"], // level 9
-    
+
     ["bbbbbbbbbbbbbbooooo",
-    "              iii^^1",
+    "                 ^^1",
     "                    ",
     "                    ",
     "                    ",
-    "      o        j    ",
+    "      o       j     ",
     "                    ",
     "                    ",
     "                    ",
     "                    ",
     "                    ",
-    "                   ",
     "      j        o    ",
+    "                    ",
     "blllllllllllllllbb  ",
     "bbbbbbbbbbbbbbbbbb  ",
     "bbbbbbbbbbbbbbbbbb  ",
@@ -449,8 +442,9 @@ var levels = [
     "           bbbbbbbbb",
     "p        eellllllll2",
     "bbbbbbbbllllbbbbbblw"], //level 10
-    
-    ["bbbbbbbbbbbbbbbbbbbb",
+
+
+   ["bbbbbbbbbbbbbbbbbbbb",
     "                    ",
     "44444444444444444444",
     "gggggggggggggggggggg",
@@ -470,32 +464,12 @@ var levels = [
     "44444444444444444444",
     "p                  ",
     "bbbbbbbbbbbbbbbbbbbb"], // GG
-    
-    ["iiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "iiiiiiiiiiiiiiiiiiiii",
-    "piiiiiiiiiiiiiiiiiiii",
-    "bbbbbbbbbbbbbbbbbbbl"], // HEHEHE
- 
+
+
 ];
 
 
-var levelText = [["This Is a Platformer\n(death count is over your head)", 200, 30], ["It has Spikes", 200, 30],["Also Jump pads", 200, 30],["& Lava", 200, 30],["Also Water\n& Ice", 200, 30],["Finally It Has The Infection", 200, 30],["Level 1", 360, 130],["Level 2\nWait", 200, 30],["Level 3", 200, 10],["Level 4", 200, 30],["Level 5", 200, 30],["Level 6", 100, 40],["Level 7\nDropper\n:P", 70, 150],["Level 8\nParkour!", 200, 200],["Level 9 made by Baljeet", 200, 340],["Level 10 Made by shadow", 200, 200],["Thanks for playing", 200, 230],["Uhh idk how u got here,\nbut here is some ice\nto play with", 200, 230]];
+var levelText = [["This Is a Platformer\n(death count is over your head)", 200, 30], ["It has Spikes", 200, 30],["Also Jump pads", 200, 30],["& Lava", 200, 30],["Also Water", 200, 30],["Finally It Has The Infection", 200, 30],["Level 1", 360, 130],["Level 2\nWait", 200, 30],["Level 3", 200, 10],["Level 4", 200, 30],["Level 5", 200, 30],["Level 6", 100, 40],["Level 7\nDropper\n:P", 70, 150],["Level 8\nParkour!", 200, 200],["Level 9 made by Baljeet", 200, 340],["Level 10 Made by shadow", 200, 200],["Thanks for playing", 200, 230]];
 }
 
 //AI
@@ -526,35 +500,6 @@ enemy.prototype.draw = function() {
     this.y += this.yVel;
     this.yVel += enemyGravity;
 };
-	
-var ice = function(x,y){
-    this.x = x;
-    this.y = y;
-    this.ismelt = false;
-    this.meltt = 255;
-    this.ismting = false;
-};
-
-ice.prototype.draw = function() {
-    fill(0,255,255,this.meltt);
-    rect(this.x,this.y,20,20);
-    fill(255,255,255,this.meltt);
-    ellipse(this.x+5,this.y+5,5,5);
-    ellipse(this.x+15,this.y+10,5,5);
-    ellipse(this.x+5,this.y+15,5,5);
-    if(this.ismting){
-        this.meltt-=5;
-    }
-    if(this.meltt<1){
-        this.ismelt = true;
-        if(this.meltt<-500){
-            this.ismelt = false;
-            this.ismting = false;
-            this.meltt = 255;
-        }
-    }
-};
-
 
 var keys = [];
 
@@ -589,14 +534,14 @@ var title = function(){
     text("Cube Effect",200,50);
     textSize(5);
     fill(50);
-    text("ver. 3.0",20,10);
+    text("ver. 2.4",20,10);
     textSize(50);
     push();
     translate(80,232);
     rotate(radians(angle));
     fill(0);
     rect(-30,-30,60,60,10);
-    pop(); 
+    pop();
     push();
     translate(70,230);
     rotate(radians(angle));
@@ -608,7 +553,7 @@ var title = function(){
     rotate(radians(angle));
     fill(0);
     rect(-30,-30,60,60,10);
-    pop(); 
+    pop();
     push();
     translate(70,140);
     rotate(radians(angle));
@@ -620,7 +565,7 @@ var title = function(){
     rotate(radians(angle));
     fill(0);
     rect(-30,-30,60,60,10);
-    pop(); 
+    pop();
     push();
     translate(70,330);
     rotate(radians(angle));
@@ -629,7 +574,7 @@ var title = function(){
     pop();
     fill(0);
     rect(160,116,200,55,10);
-    fill(rgb[1]);
+    fill(rgb[0]);
     rect(150,110,200,55,10);
     fill(0);
     text("Play",260,136);
@@ -637,7 +582,7 @@ var title = function(){
     text("Play",250,133);
     fill(0);
     rect(160,206,200,55,10);
-    fill(rgb[3]);
+    fill(rgb[1]);
     rect(150,200,200,55,10);
     fill(0);
     textSize(29);
@@ -658,25 +603,28 @@ var title = function(){
     fill(0,0,0,fade);
     rect(0,0,400,400);
     fade-=5;
+
     if(level>0){
         textSize(80);
         fill(255, 0, 0);
         text("CHEATER",200,200);
         play = false;
     }else{play = true;}
+
     if(play){
-    if(mouseX>150&&mouseX<350&&mouseY>110&&mouseY<165){
-        rgb[1]=125;
-        if(mouseIsPressed){scene=1;}
-    }else{rgb[1]=100;}
-    if(mouseX>150&&mouseX<350&&mouseY>300&&mouseY<355){
+			mousePressed =function(){}
+    if(mouseX>150*s&&mouseX<350*s&&mouseY>110*s&&mouseY<165*s){
+        rgb[0]=125;
+        mousePressed =function(){scene=1;}
+    }else{rgb[0]=100;}
+    if(mouseX>150*s&&mouseX<350*s&&mouseY>300*s&&mouseY<355*s){
         rgb[2]=125;
-        if(mouseIsPressed){scene=2; playSound(getSound("rpg/battle-swing"));}
+        mousePressed =function(){scene=2; sounds.battleswing.play();}
     }else{rgb[2]=100;}
-    if(mouseX>150&&mouseX<350&&mouseY>206&&mouseY<261){
-        rgb[3]=125;
-        if(mouseIsPressed){scene=4; playSound(getSound("rpg/battle-swing"));}
-    }else{rgb[3]=100;}
+    if(mouseX>150*s&&mouseX<350*s&&mouseY>206*s&&mouseY<261*s){
+        rgb[1]=125;
+        mousePressed =function(){scene=4; sounds.battleswing.play();}
+    }else{rgb[1]=100;}
     }
 };
 }
@@ -701,8 +649,8 @@ var help = function(){
     fill(150);
     textSize(15);
     text("This is a platformer made\nwith Electric Dolphin's \nplatformer template.\n\nI have pretty much changed\neverything exept for the \ncollision, some of the\n blocks, and the player.\n I have made some new \nblocks  too! You will learn the\n basics in the tutorial, but\n I forgot to mention the teleporter.\nThat is self explanitory though.\n\nHave fun!\nmade in two months\nall levels are posible\n(Click anywhere to continue)",200,200);
-    
-    mouseClicked = function() {scene=0;playSound(getSound("rpg/battle-swing"));};
+
+    mousePressed = function() {scene=0;sounds.battleswing.play();};
 };
 }
 
@@ -713,13 +661,14 @@ var intro = function(){
     stroke(255);
     strokeWeight(20);
     ellipse(200,220,200,200);
+		noStroke();
     textSize(50);
     fill(255);
     text("Eclipse Games",200,60);
     push();
     translate(200,220);
     rotate(radians(270));
-    arc(0, 0, 200, 200, 1, 180);
+    arc(0, 0, 200, 200, 0, PI, PIE);
     pop();
     noStroke();
     fill(0,0,0,fade);
@@ -727,12 +676,12 @@ var intro = function(){
     time++;
     if(time>100){fade+=5;}
     if(fade>300){scene=0;}
-    
+
 };
 }
 
 //Leaderboard
-{   
+{
 var score = function(){
     push();
     translate(200,300);
@@ -750,9 +699,9 @@ var score = function(){
     rect(30,30,340,340,10);
     fill(150);
     textSize(15);
-    text("Shadow 13 deaths (on version 2.4)\nMe 29 deaths (on version 2.4)\nAdventuremen 729 deaths (on version 2.4)\n\npost your scores in the comments\n to get on the leaderboard\n(click to continue)",200,200);
-    
-};    
+    text("River 13 deaths\nMe 29 deaths\nAdventuremen 729\n\npost your scores in the comments\n to get on the leaderboard\n(click to continue)",200,200);
+
+};
 
 }
 
@@ -804,7 +753,6 @@ draw = function() {
     canJump = false;
     if (initialize) {
         enemies = [];
-	ices = [];
     }
 for (var i = 0; i < levels[level].length; i ++) {
     for (var j = 0; j < levels[level][i].length; j ++) {
@@ -867,66 +815,6 @@ for (var i = 0; i < levels[level].length; i ++) {
                 }
                 }
             break;
-	
-	    case iceL:
-               if (initialize) {
-                    ices.push(new ice(j * 20, i * 20));
-                }
-                
-                for (var k = 0; k < ices.length; k++){
-                    if(!ices[k].ismelt){
-                        ix[k] = ices[k].x;
-                        iy[k] = ices[k].y;
-                
-                if (pX + 20 > ix[k] && pX < ix[k] + 20 && pY + 20 > iy[k] && pY < iy[k] + 20) {
-                    if (pX + 20 > ix[k] + round(xVel) + 1 && pX < ix[k] + round(xVel) + 20 - (round(abs(xVel)) + 1) && pY + 20 > iy[k] && pY < iy[k] + 10) {
-                        inWater = false;
-                        yVel = 0;
-                        pY = iy[k] - 20;
-                        canJump = true;
-                        ices[k].ismting = true;
-                    }
-                    if (pX + 20 > (ix[k] + round(xVel) + 1) && pX < (ix[k] + round(xVel)) + 20 - (round(abs(xVel)) + 1) && pY + 20 > iy[k] + 20/2 && pY < (iy[k] + 20/2) + 20/2) {
-                        yVel = 0.1;
-                        pY = iy[k] + 20;
-                        ices[k].ismting = true;
-                    }
-                    if (pX + 20 > ix[k] && pX < ix[k] + 10 && pY + 20 > iy[k] + round(yVel) + 1 && pY < iy[k] + round(yVel) + 1 + 20 - (round(abs(yVel)) + 1)) {
-                        pX = ix[k] - 20;
-                        xVel = 0;
-                        ices[k].ismting = true;
-                    }
-                    if (pX + 20 > ix[k] + 10 && pX < ix[k] + 10 + 10 && pY + 20 > iy[k] + round(yVel) + 1 && pY < iy[k] + round(yVel) + 1 + 20 - (round(abs(yVel)) + 1)) {
-                        pX = ix[k] + 20;
-                        xVel = 0;
-                        ices[k].ismting = true;
-                    }
-                }
-                    }
-                
-                for (var l = 0; l < enemies.length; l ++) {
-                    if (enemies[l].x > ix[k] - 19 && enemies[l].x < ix[k] + 19 && enemies[l].y > iy[k] - 21 && enemies[l].y < iy[k] - 5) {
-                    enemies[l].yVel = 0;
-                    if (enemies[l].y > iy[k] - 20) {
-                        enemies[l].y = iy[k] - 20;
-                        enemies[l].yVel = 0;
-                    }
-                }
-                    if (enemies[l].x > ix[k] - 19 && enemies[l].x < ix[k] + 19 && enemies[l].y < iy[k] + 20 && enemies[l].y > iy[k] + 5) {
-                    enemies[l].yVel = -enemies[l].yVel/4;
-                    enemies[l].y += 2;
-                }
-                    if (enemies[l].x > ix[k] - 20 && enemies[l].x < ix[k] - 9 && enemies[l].y > iy[k] - 17 && enemies[l].y < iy[k] + 17) {
-                    enemies[l].dir = 0;
-                }
-                    if (enemies[l].x < ix[k] + 20 && enemies[l].x > ix[k] + 9 && enemies[l].y > iy[k] - 17 && enemies[l].y < iy[k] + 17) {
-                    enemies[l].dir = 1;
-                }
-                }
-                }
-                
-            break;
-            
 
             case doorL:
                 fill(0, 0, 0);
@@ -1247,11 +1135,6 @@ if (keys[38] && canJump || keys[87] && canJump) {
     if(inWater===false){
     sounds.jump2.play();
     }
-}
-	    
-for (var i = 0; i < ices.length; i ++) {
-    ices[i].draw();
-    fill(255, 0, 0);
 }
 
 for (var i = 0; i < enemies.length; i ++) {
