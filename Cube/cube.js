@@ -94,7 +94,7 @@ function setup(){
 	if(iframe==="true"){
 	createCanvas(280,280);
 	}else{
-	var canvas = createCanvas(windowWidth, windowHeight);
+	var canvas = createCanvas(windowHeight, windowHeight);
 	canvas.parent('script-holder');
 	}
 	noStroke();
