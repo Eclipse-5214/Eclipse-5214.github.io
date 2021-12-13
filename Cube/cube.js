@@ -99,7 +99,10 @@ function setup(){
 	if(iframe==="true"){
 	createCanvas(280,280);
 	}else{
-	createCanvas(windowHeight,windowHeight);
+	
+	var canvas = createCanvas(windowHeight,windowHeight);
+	canvas.parent('script-holder');
+	
 	}
 	noStroke();
 	textAlign(CENTER, CENTER);
