@@ -570,18 +570,18 @@ keyReleased = function() {
 //titlescreen
 {
 var title = function(){
-    pushMatrix();
+    push();
     translate(200,300);
     rotate(radians(45));
     fill(59, 59, 59);
     rect(0,-300,40,600);
-    popMatrix();
-    pushMatrix();
+    pop();
+    push();
     translate(200,100);
     rotate(radians(45));
     fill(59, 59, 59);
     rect(0,-200,40,600);
-    popMatrix();
+    pop();
     textSize(50);
     fill(0);
     text("Cube Effect",210,52);
@@ -591,42 +591,42 @@ var title = function(){
     fill(50);
     text("ver. 3.0",20,10);
     textSize(50);
-    pushMatrix();
+    push();
     translate(80,232);
     rotate(radians(angle));
     fill(0);
     rect(-30,-30,60,60,10);
-    popMatrix(); 
-    pushMatrix();
+    pop(); 
+    push();
     translate(70,230);
     rotate(radians(angle));
     fill(255, 127, 127);
     rect(-30,-30,60,60,10);
-    popMatrix();
-    pushMatrix();
+    pop();
+    push();
     translate(80,142);
     rotate(radians(angle));
     fill(0);
     rect(-30,-30,60,60,10);
-    popMatrix(); 
-    pushMatrix();
+    pop(); 
+    push();
     translate(70,140);
     rotate(radians(angle));
     fill(244, 127, 255);
     rect(-30,-30,60,60,10);
-    popMatrix();
-    pushMatrix();
+    pop();
+    push();
     translate(80,332);
     rotate(radians(angle));
     fill(0);
     rect(-30,-30,60,60,10);
-    popMatrix(); 
-    pushMatrix();
+    pop(); 
+    push();
     translate(70,330);
     rotate(radians(angle));
     fill(100, pulse, pulse);
     rect(-30,-30,60,60,10);
-    popMatrix();
+    pop();
     fill(0);
     rect(160,116,200,55,10);
     fill(rgb[1]);
@@ -684,18 +684,18 @@ var title = function(){
 //credits
 {
 var help = function(){
-    pushMatrix();
+    push();
     translate(200,300);
     rotate(radians(45));
     fill(59, 59, 59);
     rect(0,-300,40,600);
-    popMatrix();
-    pushMatrix();
+    pop();
+    push();
     translate(200,100);
     rotate(radians(45));
     fill(59, 59, 59);
     rect(0,-200,40,600);
-    popMatrix();
+    pop();
     fill(100);
     rect(30,30,340,340,10);
     fill(150);
@@ -716,11 +716,11 @@ var intro = function(){
     textSize(50);
     fill(255);
     text("Eclipse Games",200,60);
-    pushMatrix();
+    push();
     translate(200,220);
     rotate(radians(270));
     arc(0, 0, 200, 200, 1, 180);
-    popMatrix();
+    pop();
     noStroke();
     fill(0,0,0,fade);
     rect(0,0,400,400);
@@ -734,18 +734,18 @@ var intro = function(){
 //Leaderboard
 {   
 var score = function(){
-    pushMatrix();
+    push();
     translate(200,300);
     rotate(radians(45));
     fill(59, 59, 59);
     rect(0,-300,40,600);
-    popMatrix();
-    pushMatrix();
+    pop();
+    push();
     translate(200,100);
     rotate(radians(45));
     fill(59, 59, 59);
     rect(0,-200,40,600);
-    popMatrix();
+    pop();
     fill(100);
     rect(30,30,340,340,10);
     fill(150);
