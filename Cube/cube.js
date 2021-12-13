@@ -637,7 +637,7 @@ var title = function(){
     text("Play",250,133);
     fill(0);
     rect(160,206,200,55,10);
-    fill(rgb[3]);
+    fill(rgb[2]);
     rect(150,200,200,55,10);
     fill(0);
     textSize(29);
