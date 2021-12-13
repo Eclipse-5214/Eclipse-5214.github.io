@@ -81,6 +81,7 @@ var decoBlueL = "B";
 var wallL = "3";
 var platformL = "4";
 var doorL = "5";
+var iceL = "i"
 }
 
 function preload(){
