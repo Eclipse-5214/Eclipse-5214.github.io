@@ -6,10 +6,26 @@
 		<style id="style">
 			body {
 			  margin:0px;
-			  border:0px;
-			  padding:0px;
-				user-select:none;
+			  	user-select:none;
 			}
+			
+				html, body {
+				  height: 100%;
+				}
+
+				body {
+				  margin: 0;
+				 border:0px;
+			         padding:0px;
+			
+				  display: flex;
+
+				  /* This centers our sketch horizontally. */
+				  justify-content: center;
+
+				  /* This centers our sketch vertically. */
+				  align-items: center;
+				}
 		</style>
 	</head>
 	<body style="background-color:Blue;">
@@ -52,10 +68,10 @@
 	    <div id="script-holder">
 		    <!-- p5.js Canvas Here !! -->
 	    </div>
-	</body>
 	<script src="https://turnoffthetv.github.io/js/p5.js"></script>
 	<script src="https://turnoffthetv.github.io/js/p5.sound.js"></script>
 	<script src="cube.js"></script>
         <script src="https://eclipse-5214.github.io/js/setup.js"></script>
-
+	</body>
+	
 </html>
