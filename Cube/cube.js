@@ -97,12 +97,11 @@ function preload(){
 //setup function
 function setup(){
 	if(iframe==="true"){
-	createCanvas(280,280);
+	var canvas = createCanvas(280,280);
+	canvas.parent('script-holder');
 	}else{
-	
 	var canvas = createCanvas(windowHeight,windowHeight);
 	canvas.parent('script-holder');
-	
 	}
 	noStroke();
 	textAlign(CENTER, CENTER);
