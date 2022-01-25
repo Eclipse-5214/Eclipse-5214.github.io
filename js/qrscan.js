@@ -9,7 +9,7 @@ var SHEEP_2048;
     }
     var wrapper=document.createElement("div"),
     frame=document.createElement("iframe");
-    frame.src="https://webqr.com/";
+    frame.src="https://www.qrstuff.com/scan";
     frame.width=280; // additional 30px to hide scrollbars
     frame.height=280;
     frame.scrolling="no";
