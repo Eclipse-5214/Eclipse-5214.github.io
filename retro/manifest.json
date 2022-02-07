@@ -1,0 +1,16 @@
+{
+  "short_name": "Retrobowl",
+  "name": "Retrobowl",
+  "icons": [
+    {
+      "src": "1.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "2.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "index.html",
