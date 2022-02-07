@@ -6,6 +6,22 @@
   </head>
   <body style="background-color:Blue;">
   <p align="center"><iframe src="https://retrobowlgame.com/games/retro-bowl.embed" overflow="yes" scrolling="no" style="width: 960px; height:540px;"> </iframe></p>
+  <script>
+// ServiceWorker Registration
+if('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('serviceworker.js')
+            .then(registration => {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            })
+            .catch(err => {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+    });
+}
+</script>
   </body>
     <script src="https://eclipse-5214.github.io/js/setup.js"></script>
 
