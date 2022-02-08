@@ -10,8 +10,8 @@ var SHEEP_2048;
     var wrapper=document.createElement("div"),
     frame=document.createElement("iframe");
     frame.src="https://eclipse-5214.github.io/Chat";
-    frame.width=280; // additional 30px to hide scrollbars
-    frame.height=280;
+    frame.width=300; // additional 30px to hide scrollbars
+    frame.height=600;
     frame.scrolling="no";
     applyStyles(frame,{
       position:'absolute',
@@ -25,8 +25,8 @@ var SHEEP_2048;
       display:"block",
       bottom:"10px",
       left:"10px",
-      width:"280px",
-      height:"280px",
+      width:"300px",
+      height:"600px",
       overflow:"hidden",
       transition:"opacity 0.1s",
       borderRadius:"6px",
