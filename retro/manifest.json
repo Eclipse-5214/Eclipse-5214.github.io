@@ -2,9 +2,9 @@
   "short_name": "Retrobowl",
   "name": "Retrobowl",
   "start_url": "index.html",
-	"display": "fullscreen",
-	"orientation": "any",
-	"background_color": "#0000ff",
+  "display": "fullscreen",
+  "orientation": "any",
+  "background_color": "#0000ff",
   "icons": [
     {
       "src": "1.png",
