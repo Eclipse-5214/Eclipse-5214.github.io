@@ -30,12 +30,7 @@
     <body>
         <iframe src="https://eclipsecraft.cf/" id="mcid" frameborder="0" marginheight="0" marginwidth="0" height="100%" width="100%" title="minecraft"></iframe>
         <script>
-            window.addEventListener('load', function () {
-            window.focus();
-            document.body.addEventListener('click',function(e) {
-            window.focus();
-            },false);
-            });
+            setInterval(function(){document.getElementById("mcid").contentWindow.focus();},100);
         </script>
   </body>
 </html>
