@@ -30,12 +30,12 @@
     <body>
         <iframe src="https://eclipsecraft.cf/" id="mcid" frameborder="0" marginheight="0" marginwidth="0" height="100%" width="100%" title="minecraft"></iframe>
         <script>
-            
-            setTimeout(machet,100);
-           function machet() {
-        //alert("machet");
-        document.getElementById("mcid").contentWindow.focus();
-    }
-</script>
+            window.addEventListener('load', function () {
+            window.focus();
+            document.body.addEventListener('click',function(e) {
+            window.focus();
+            },false);
+            });
+        </script>
   </body>
 </html>
