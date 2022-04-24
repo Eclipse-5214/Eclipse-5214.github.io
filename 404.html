@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <style>
+    .background--custom {
+      background: linear-gradient(90deg, #00808F, #6D4DE7, #0028FF);
+      background-size: 300% 300%;
+      animation: gradient 4s alternate infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+    @keyframes gradient {
+      0% {
+        background-position: 0%;
+      }
+      100% {
+        background-position: 100%;
+      }
+    }
+    </style>
          <link rel="shortcut icon" type="image/png" href="https://eclipse-5214.github.io/Images/LogoMakr-0WRQzV.png"/>
         <meta charset="utf-8">
         <title>404 error</title>
     </head>
-    <body style="background-color:Blue;">
+    <body>
+        <div class="background--custom"></div>
       <h1>HOW IN THE WORLD DID YOU GET HERE?!?</h1>
         <h3>no seriously this is a 404 error page</h3>
          <style>
